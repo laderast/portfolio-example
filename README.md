@@ -1,6 +1,6 @@
 # Simple Hugo Portfolio Template
 
-Simple portfolio example derived from the forty theme.
+Simple hugo portfolio example derived from the forty theme. Designed to be used for Data Scientists sharing their R projects.
 
 ## Customizing
 
