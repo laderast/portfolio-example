@@ -4,7 +4,9 @@ Simple hugo portfolio example derived from the forty theme. Designed to be used 
 
 ## Getting Started
 
-To get started, click the green "Use This Template" to make a copy to your own GitHub account.
+To get started, click the green "Use This Template" to make a copy to your own GitHub account. 
+
+Name your new repository, and click the "Create Repository From Template".
 
 ## Customizing
 
@@ -34,12 +36,8 @@ Menu can be modified here.
       url = "#"
 
     [[params.navigation.links]]
-      name = "Blogs"
+      name = "Blog"
       url = "blogs"
-
-    [[params.navigation.links]]
-      name = "Elements"
-      url = "elements.html"
 
 ```
 
