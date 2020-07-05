@@ -48,12 +48,13 @@ Banner:
     # the 'static/img' folder.
     title = "Ted Laderas, PhD"
     subtitle = "Portfolio of Data Science and Visualization Projects"
-    buttonText = "Curriculum Vitae"
 
 ```
 
-Most importantly, Tiles, where you'll put individual projects and links! Add a project Rmarkdown by adding a folder in the `content/projects` directory, and name your 
-RMarkdown html file `index.html`. Refer to the `url` as `projects/choropleth` (look in the `content/projects` folder for examples.)
+Most importantly, Tiles, where you'll put individual projects and links! 
+
+Add a project Rmarkdown by adding a folder in the `content/projects` directory, and name your 
+RMarkdown html file `index.html` in the folder. Refer to the `url` as `projects/choropleth` (look in the `content/projects` folder for examples.)
 
 Add an image for each tile in `static/image/projects/`, and refer to them in the `image` field as `projects/choropleth.png`.
 
