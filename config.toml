@@ -169,9 +169,9 @@ disqusShortname = ""
     title = "Email"
     email = "tedladeras@gmail.com"
 
-    #[[params.contact.phone]]
-    #title = "Phone"
-    #phone = "(000) 000-0000 x1234"
+    [[params.contact.phone]]
+    title = "Phone"
+    phone = "(000) 000-0000 x1234"
 
     [[params.contact.address]]
     title = "Address"
