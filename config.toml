@@ -91,31 +91,31 @@ disqusShortname = ""
     # Display your showcases here.
     
     [[params.tiles.showcase]]
-      title = "Choropleths for Ready for R Class"
+      title = "Project: Choropleths of Ready for R Class"
       subtitle = "Understanding our email list by country domain"
       image = "projects/choropleth.png"
       url = "projects/choropleth"
 
     [[params.tiles.showcase]]
-      title = "Animal Crossing Tidy Tuesday"
+      title = "Project: Animal Crossing Tidy Tuesday"
       subtitle = "Understanding Character and Animal Types in Animal Crossing"
       image = "projects/ac.png"
       url = "projects/animal_crossing"
 
     [[params.tiles.showcase]]
-      title = "Ready for R"
+      title = "Course: Ready for R"
       subtitle = "A gentle introduction to the R and the tidyverse"
       image = "projects/ready4r.png"
       url = "https://ready4r.netlify.app"
 
     [[params.tiles.showcase]]
-      title = "Stats for Neuroscientists"
+      title = "Course: Stats for Neuroscientists"
       subtitle = "A Course on Statistical Image Processing"
       image = "projects/stats4neuro.png"
       url = "https://stats4neuro.netlify.app"
       
     [[params.tiles.showcase]]
-      title = "R-Bootcamp"
+      title = "Course: R-Bootcamp"
       subtitle = "An interactive introduction to the tidyverse"
       image = "projects/r-bootcamp.jpg"
       url = "https://r-bootcamp.netlify.app"
