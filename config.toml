@@ -87,7 +87,7 @@ disqusShortname = ""
     # Display your showcases here.
     
     [[params.tiles.showcase]]
-      title = "Project: Choropleths of Ready for R Class"
+      title = "Project: Choropleth of Ready for R Class"
       subtitle = "Where are the Ready for R Students From?"
       image = "projects/choropleth.png"
       url = "projects/choropleth"
@@ -106,7 +106,7 @@ disqusShortname = ""
 
     [[params.tiles.showcase]]
       title = "Course: Stats for Neuroscientists"
-      subtitle = "A Course on Statistical Image Processing"
+      subtitle = "A Course on Statistical Image Processing for Neuroscientists new to computing"
       image = "projects/stats4neuro.png"
       url = "https://stats4neuro.netlify.app"
       
@@ -168,7 +168,7 @@ disqusShortname = ""
     # by copying the corresponding map with frontmatter code.
     [[params.contact.email]]
     title = "Email"
-    email = "tedladeras@gmail.com"
+    email = "tedladeras (at) gmail.com"
 
     [[params.contact.phone]]
     title = "Phone"
