@@ -2,6 +2,10 @@
 
 Simple hugo portfolio example derived from the forty theme. Designed to be used for Data Scientists sharing their R projects.
 
+## Getting Started
+
+To get started, click the green "Use This Template" to make a copy to your own GitHub account.
+
 ## Customizing
 
 Almost all elements are edited within the `config.toml` file. At the bare minimum, these are the fields you should customize:
