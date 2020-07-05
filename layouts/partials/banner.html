@@ -1,0 +1,11 @@
+{{ "<!-- Banner -->" | safeHTML}}
+    <section id="banner" class="major">
+        <div class="inner">
+            <header class="major">
+                <h1>{{ .Site.Params.Banner.title }}</h1>
+            </header>
+            <div class="content">
+                <p>{{ .Site.Params.Banner.subtitle }}</p>
+            </div>
+        </div>
+    </section>
