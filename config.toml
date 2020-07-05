@@ -30,7 +30,7 @@ disqusShortname = ""
   # Just a custom image variable, please define it in .md files for content.
   image = ""
 
-  ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
+  ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$", "public"]
 
   # 404 error customization
   [params.error404]
