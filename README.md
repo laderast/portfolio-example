@@ -76,3 +76,7 @@ Add an image for each tile in `static/image/projects/`, and refer to them in the
 ```
 
 Play around with this and update the fields. You'll have a portfolio up in no time!
+
+## Next Step: Building on Netlify
+
+[TBA]
