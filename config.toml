@@ -1,7 +1,7 @@
 # Site settings
 baseURL = "http://hugo-portfolio-example.netlify.app"
 languageCode = "en-us"
-title = "Forty"
+title = "Portfolio for Ted Laderas, PhD"
 theme = "forty"
 
 # Enter your tracking code to enable Google Analytics
@@ -29,6 +29,8 @@ disqusShortname = ""
 
   # Just a custom image variable, please define it in .md files for content.
   image = ""
+
+  ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_cache$"]
 
   # 404 error customization
   [params.error404]
