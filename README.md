@@ -2,6 +2,8 @@
 
 Simple hugo portfolio example derived from the forty theme. Designed to be used for Data Scientists sharing their R projects.
 
+Inspired by Emi Tanaka's Showcase page: https://emitanaka.org/showcase/
+
 ## Getting Started
 
 To get started, click the green "Use This Template" to make a copy to your own GitHub account. 
