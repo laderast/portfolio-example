@@ -85,6 +85,11 @@ disqusShortname = ""
   [params.tiles]
     enable = true
     # Display your showcases here.
+    [[params.tiles.showcase]]
+      title = "Project: Understanding Coffee Scores"
+      subtitle = "Does processing method influence overall score?"
+      image = "projects/coffee.png"
+      url = "projects/coffee"
     
     [[params.tiles.showcase]]
       title = "Project: Choropleth of Ready for R Class"
