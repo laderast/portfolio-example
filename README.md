@@ -132,6 +132,8 @@ Enjoy your updated portfolio!
 
 The next thing you'll want to do is save a local copy to your machine. That way, you can edit it in RStudio using the `blogdown` package and work on it on your machine.
 
+Learn more about Netlify, RMarkdown, and hugo file structure by watching [Sharing Online on Short Notice](http://rstd.io/sharing).
+
 Learn a bit about how Git and GitHub work by checking out [Happy Git and GitHub for the useR](https://happygitwithr.com/). 
 
 Then introduce yourself to the `blogdown` package via [blogdown: Creating Websites with RMarkdown](https://bookdown.org/yihui/blogdown/).
