@@ -32,7 +32,7 @@ If you haven't authorized Netlify to connect to your account, you'll be asked to
 
 ![](static/img/install/deploy2.png)
 
-Here's your brand new site
+Here's your brand new site:
 
 ![](static/img/install/site_first.png)
 
