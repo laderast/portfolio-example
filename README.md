@@ -12,15 +12,15 @@ Inspired by Emi Tanaka's Showcase page: https://emitanaka.org/showcase/
 
 2. You'll then be asked to connect your Netlify account to GitHub. Click the `Connect to GitHub` button.
 
-![](static/image/install/connect_github.png)
+![](static/img/install/connect_github.png)
 
 3. Name your repository anything you want:
 
-![](static/image/install/name_repo.png)
+![](static/img/install/name_repo.png)
 
 then click the `Save and Deploy` button:
 
-![](static/image/install/name_repo2.png)
+![](static/img/install/name_repo2.png)
 
 If you haven't authorized Netlify to connect to your account, you'll be asked to authorize it. Make sure to authorize before moving on.
 
