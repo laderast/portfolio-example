@@ -4,6 +4,8 @@ Simple hugo portfolio example derived from the forty theme. Designed to be used 
 
 Inspired by Emi Tanaka's Showcase page: https://emitanaka.org/showcase/
 
+Take a look at the example website: https://hugo-portfolio-example.netlify.app/
+
 ## Getting Started
 
 1. To get started, sign up for GitHub and Netlify and click the following button.
@@ -132,11 +134,13 @@ Enjoy your updated portfolio!
 
 The next thing you'll want to do is save a local copy to your machine. That way, you can edit it in RStudio using the `blogdown` package and work on it on your machine.
 
-Learn more about Netlify, RMarkdown, and hugo file structure by watching [Sharing Online on Short Notice](http://rstd.io/sharing).
+* Learn more about Netlify, RMarkdown, and hugo file structure by watching [Sharing Online on Short Notice](http://rstd.io/sharing).
 
-Learn a bit about how Git and GitHub work by checking out [Happy Git and GitHub for the useR](https://happygitwithr.com/). 
+* Learn a bit about how Git and GitHub work by checking out [Happy Git and GitHub for the useR](https://happygitwithr.com/). 
 
-Then introduce yourself to the `blogdown` package via [blogdown: Creating Websites with RMarkdown](https://bookdown.org/yihui/blogdown/).
+* Then introduce yourself to the `blogdown` package via [blogdown: Creating Websites with RMarkdown](https://bookdown.org/yihui/blogdown/).
+
+* Learn more about the hugo `forty` theme, which this website is based on: https://themes.gohugo.io/forty/
 
 Be sure to share your web link with us! We want to see what you do with this.
 
