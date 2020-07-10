@@ -6,11 +6,14 @@ Inspired by Emi Tanaka's Showcase page: https://emitanaka.org/showcase/
 
 ## Getting Started
 
-To get started, click the green "Use This Template" to make a copy to your own GitHub account. 
-
-Name your new repository, and click the "Create Repository From Template".
+To get started, sign up for GitHub and click the following button.
 
 [![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/laderast/portfolio-example)
+
+
+
+
+If you haven't authorized Netlify to connect to your account, you'll be asked to authorize it.
 
 ## Customizing
 
