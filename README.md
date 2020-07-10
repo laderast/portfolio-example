@@ -10,7 +10,7 @@ To get started, click the green "Use This Template" to make a copy to your own G
 
 Name your new repository, and click the "Create Repository From Template".
 
-[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/laderast/portfolio-example/)
+[![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/laderast/portfolio-example)
 
 ## Customizing
 
