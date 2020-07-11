@@ -44,18 +44,17 @@ Here's your brand new site:
 
 ![Domain Settings Button](static/img/install/site_name.png)
 
-In the following page, click the **Options >> Edit Site Name** button:
+2. In the following page, click the **Options >> Edit Site Name** button. You can change the first part of the domain, such as "myportfolio.netlify.app).
 
 ![Edit Site Name](static/img/install/site_name2.png)
 
-2. Now you should start customizing your site. You can do most of the updating on your GitHub Repository. To find it, you can click the "GitHub" Link in your deploy page, or find it at https://github.com/YOURUSERNAME/REPONAME, where YOURUSERNAME is your GitHub User Name, and REPONAME is the name of your repository. 
+## Customizing Your Site
+
+1. Now you should start customizing your site. You can do most of the updating on your GitHub Repository. To find it, you can click the "GitHub" Link in your deploy page, or find it at https://github.com/YOURUSERNAME/REPONAME, where YOURUSERNAME is your GitHub User Name, and REPONAME is the name of your repository. 
 
 ![Your repository link](static/img/install/your_repo.png)
 
-
-## Customizing Your Site
-
-1. Click on the `config.toml` file and edit it (use the pencil in the top right corner) to start editing it.
+2. Click on the `config.toml` file and edit it (use the pencil in the top right corner) to start editing it.
 
 ![](static/img/install/config_toml.png)
 ![](static/img/install/edit_config.png)
@@ -94,7 +93,7 @@ Menu can be modified here. If you're not sure about this part, you can leave it 
 
 ```
 
-2. Edit the Banner information as well: 
+3. Edit the Banner information as well: 
 
 ```
   # Banner section
@@ -105,13 +104,70 @@ Menu can be modified here. If you're not sure about this part, you can leave it 
     subtitle = "Portfolio of Data Science and Visualization Projects"
 
 ```
-3. Click the green `Commit Changes` at the bottom of the edit window to save your changes. By the magic of Netlify, your site will be rebuilt with your settings. 
+
+4. You can also edit your personal information:
+
+```
+v# Contact Section
+    # You can add multiple emails, phone numbers, or addresses
+    # by copying the corresponding map with frontmatter code.
+    [[params.contact.email]]
+    title = "Email"
+    email = "tedladeras (at) gmail.com"
+
+    [[params.contact.phone]]
+    title = "Phone"
+    phone = "(000) 000-0000 x1234"
+
+    [[params.contact.address]]
+    title = "Address"
+    street = "3181 SW Sam Jackson Road"
+    city = "Portland, OR 97212"
+    country = "USA"
+
+  # Footer section
+  [params.footer]
+    enable = true
+    copyright = "Ted Laderas"
+
+    # Uses font awesome icons
+    [[params.footer.social]]
+      icon = "fa-twitter"
+      url= "https://www.twitter.com/tladeras"
+      label = "Twitter"
+
+    #[[params.footer.social]]
+     # icon = "fa-facebook"
+      #url= "https://www.facebook.com"
+      #label = "Facebook"
+
+    #[[params.footer.social]]
+     # icon = "fa-instagram"
+      #url= "https://www.instagram.com"
+      #label = "Instagram"
+    
+    [[params.footer.social]]
+      icon = "fa-github"
+      url= "https://www.github.com/laderast"
+      label = "GitHub"
+
+    [[params.footer.social]]
+      icon = "fa-linkedin"
+      url= "https://www.linkedin.com/in/ted-laderas-0714a92/"
+      label = "LinkedIn"
+    ```
+
+5. When you're done editing, click the green `Commit Changes` at the bottom of the edit window to save your changes. 
+
+Wait a second. By the magic of Netlify, your site will be rebuilt with your settings. 
 
 ![](static/img/install/commit_changes.png)
 
 Bask in your brand new site!
 
 ![](static/img/install/site_first.png)
+
+For more info on customizing, look at the theme page: https://themes.gohugo.io/forty/
 
 ## Adding your projects
 
