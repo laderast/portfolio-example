@@ -14,25 +14,25 @@ Take a look at the example website: https://hugo-portfolio-example.netlify.app/
 
 2. You'll then be asked to connect your Netlify account to GitHub. Click the `Connect to GitHub` button.
 
-![](static/img/install/connect_github.png)
+![Connect to Github Button](static/img/install/connect_github.png)
 
 3. Name your repository anything you want:
 
-![](static/img/install/name_repo.png)
+![Naming box for repository](static/img/install/name_repo.png)
 
 then click the `Save and Deploy` button:
 
-![](static/img/install/name_repo2.png)
+![Save and Deploy Button](static/img/install/name_repo2.png)
 
 If you haven't authorized Netlify to connect to your account, you'll be asked to authorize it. Make sure to authorize before moving on.
 
 4. You'll then move on to what's called the `deploy` page. Notice that in the top right, there is a yellow **deploy in progress** indicator. Wait a second.
 
-![](static/img/install/deploy1.png)
+![Deploy in progress](static/img/install/deploy1.png)
 
 5. You'll now see a green link in the top left corner. Click on it, and you'll see your brand new site!
 
-![](static/img/install/deploy2.png)
+![Built link](static/img/install/deploy2.png)
 
 Here's your brand new site:
 
@@ -40,13 +40,19 @@ Here's your brand new site:
 
 6. That crazy name is the address of your site. To change it, you can click on the **Domain Settings** button: 
 
-![](static/img/install/site_name.png)
+![Domain Settings Button](static/img/install/site_name.png)
 
-In the following page, click the Options >> Edit Site Name
+In the following page, click the **Options >> Edit Site Name** button:
 
-![](static/img/install/site_name2.png)
+![Edit Site Name](static/img/install/site_name2.png)
 
-7. Now you should start customizing your site. Click on the `config.toml` file and edit it (use the pencil in the top right corner) to start editing it.
+7. Now you should start customizing your site. You can do most of the updating on your GitHub Repository. To find it, you can click the "GitHub" Link in your deploy page, or find it at https://github.com/YOURUSERNAME/REPONAME, where YOURUSERNAME is your GitHub User Name, and REPONAME is the name of your repository. 
+
+![Your repository link](static/img/install/your_repo.png)
+
+8. Click on the `config.toml` file and edit it (use the pencil in the top right corner) to start editing it.
+
+![](static/img/install/commit_changes.png)
 
 Almost all elements are edited within the `config.toml` file. At the bare minimum, these are the fields you should customize.
 
@@ -92,6 +98,9 @@ Menu can be modified here. If you're not sure about this part, you can leave it 
     subtitle = "Portfolio of Data Science and Visualization Projects"
 
 ```
+9. Click the green `Commit Changes` at the bottom of the edit window to save your changes. By the magic of Netlify, your site will be rebuilt with your settings. 
+
+![](static/img/install/commit_changes.png)
 
 Bask in your brand new site!
 
