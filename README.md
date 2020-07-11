@@ -6,6 +6,10 @@ Inspired by Emi Tanaka's Showcase page: https://emitanaka.org/showcase/
 
 Take a look at the example website: https://hugo-portfolio-example.netlify.app/
 
+## Why have a portfolio?
+
+<blockquote class="twitter-tweet" data-partner="tweetdeck"><p lang="en" dir="ltr">My students, when I tell them &quot;you should do <a href="https://twitter.com/hashtag/tidytuesday?src=hash&amp;ref_src=twsrc%5Etfw">#tidytuesday</a>!&quot; and they hem and haw. Well, look, it can GET YOU A JOB. <a href="https://t.co/sOYAsLZJIQ">https://t.co/sOYAsLZJIQ</a></p>&mdash; Ted Laderas, PhD (@tladeras) <a href="https://twitter.com/tladeras/status/1280883404624392192?ref_src=twsrc%5Etfw">July 8, 2020</a></blockquote>
+
 ## How does this work?
 
 These steps will make a copy of this repository to your own GitHub account and connect it to a web host called Netlify. 
