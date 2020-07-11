@@ -155,7 +155,7 @@ v# Contact Section
       icon = "fa-linkedin"
       url= "https://www.linkedin.com/in/ted-laderas-0714a92/"
       label = "LinkedIn"
-    ```
+ ```
 
 5. When you're done editing, click the green `Commit Changes` at the bottom of the edit window to save your changes. 
 
