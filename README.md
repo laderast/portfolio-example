@@ -8,7 +8,7 @@ Take a look at the example website: https://hugo-portfolio-example.netlify.app/
 
 ## Why have a portfolio?
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">My <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> friends, can you believe that I got a job interview and possibly an offer because I made this treemap for <a href="https://twitter.com/hashtag/TidyTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#TidyTuesday</a>? <br><br>You never know who is watching you till you get calls from those who would like hire you. Keep up the good work and share with us! <a href="https://t.co/bdI0zJ5vjJ">https://t.co/bdI0zJ5vjJ</a></p>&mdash; Zhi Yang, PhD (@zhiiiyang) <a href="https://twitter.com/zhiiiyang/status/1185328020745117698?ref_src=twsrc%5Etfw">October 18, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">My <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> friends, can you believe that I got a job interview and possibly an offer because I made this treemap for <a href="https://twitter.com/hashtag/TidyTuesday?src=hash&amp;ref_src=twsrc%5Etfw">#TidyTuesday</a>? <br><br>You never know who is watching you till you get calls from those who would like hire you. Keep up the good work and share with us! <a href="https://t.co/bdI0zJ5vjJ">https://t.co/bdI0zJ5vjJ</a></p>&mdash; Zhi Yang, PhD (@zhiiiyang) <a href="https://twitter.com/zhiiiyang/status/1185328020745117698?ref_src=twsrc%5Etfw">October 18, 2019</a></blockquote>
 
 ## How does this work?
 
