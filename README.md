@@ -38,7 +38,9 @@ Here's your brand new site:
 
 ![](static/img/install/site_first.png)
 
-6. That crazy name is the address of your site. To change it, you can click on the **Domain Settings** button: 
+## Changing your domain Name
+
+1. That crazy name is the address of your site. To change it, you can click on the **Domain Settings** button: 
 
 ![Domain Settings Button](static/img/install/site_name.png)
 
@@ -46,13 +48,18 @@ In the following page, click the **Options >> Edit Site Name** button:
 
 ![Edit Site Name](static/img/install/site_name2.png)
 
-7. Now you should start customizing your site. You can do most of the updating on your GitHub Repository. To find it, you can click the "GitHub" Link in your deploy page, or find it at https://github.com/YOURUSERNAME/REPONAME, where YOURUSERNAME is your GitHub User Name, and REPONAME is the name of your repository. 
+2. Now you should start customizing your site. You can do most of the updating on your GitHub Repository. To find it, you can click the "GitHub" Link in your deploy page, or find it at https://github.com/YOURUSERNAME/REPONAME, where YOURUSERNAME is your GitHub User Name, and REPONAME is the name of your repository. 
 
 ![Your repository link](static/img/install/your_repo.png)
 
-8. Click on the `config.toml` file and edit it (use the pencil in the top right corner) to start editing it.
+
+## Customizing Your Site
+
+1. Click on the `config.toml` file and edit it (use the pencil in the top right corner) to start editing it.
 
 ![](static/img/install/config_toml.png)
+![](static/img/install/edit_config.png)
+
 
 Almost all elements are edited within the `config.toml` file. At the bare minimum, these are the fields you should customize.
 
@@ -87,7 +94,7 @@ Menu can be modified here. If you're not sure about this part, you can leave it 
 
 ```
 
-8. Edit the Banner information as well: 
+2. Edit the Banner information as well: 
 
 ```
   # Banner section
@@ -98,7 +105,7 @@ Menu can be modified here. If you're not sure about this part, you can leave it 
     subtitle = "Portfolio of Data Science and Visualization Projects"
 
 ```
-9. Click the green `Commit Changes` at the bottom of the edit window to save your changes. By the magic of Netlify, your site will be rebuilt with your settings. 
+3. Click the green `Commit Changes` at the bottom of the edit window to save your changes. By the magic of Netlify, your site will be rebuilt with your settings. 
 
 ![](static/img/install/commit_changes.png)
 
