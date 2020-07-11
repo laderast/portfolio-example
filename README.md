@@ -8,7 +8,7 @@ Take a look at the example website: https://hugo-portfolio-example.netlify.app/
 
 ## Getting Started
 
-1. To get started, sign up for GitHub and Netlify and click the following button.
+1. To get started, sign up for [GitHub](https://github.com) and [Netlify](https://netlify.com) accounts and then click the following button.
 
 [![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/laderast/portfolio-example)
 
