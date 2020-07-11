@@ -52,7 +52,7 @@ In the following page, click the **Options >> Edit Site Name** button:
 
 8. Click on the `config.toml` file and edit it (use the pencil in the top right corner) to start editing it.
 
-![](static/img/install/commit_changes.png)
+![](static/img/install/config_toml.png)
 
 Almost all elements are edited within the `config.toml` file. At the bare minimum, these are the fields you should customize.
 
