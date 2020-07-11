@@ -186,7 +186,7 @@ RMarkdown html file `index.html` in the folder. The easiest way to do this is to
 
 ![](static/img/install/add_file.png)
 
-2. Drag and drop your folder with the `index.html` file in there.
+2. Drag and drop your folder with the `index.html` file in there. Save your changes by using the green `Commit Changes` button at the bottom of the page.
 
 ![](static/img/install/upload_file.png)
 
