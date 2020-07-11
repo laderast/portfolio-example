@@ -6,6 +6,14 @@ Inspired by Emi Tanaka's Showcase page: https://emitanaka.org/showcase/
 
 Take a look at the example website: https://hugo-portfolio-example.netlify.app/
 
+## How does this work?
+
+These steps will make a copy of this repository to your own GitHub account and connect it to a web host called Netlify. 
+
+Netlify handles most of the hard stuff (such as making html from your text and formatting), so you can concentrate on making content. It does this by using what's called a webpage rendering engine (called Hugo) to transform your text to the HTML web format.
+
+To get started, you can work from the GitHub and Netlify sites directly. 
+
 ## Getting Started
 
 1. To get started, sign up for [GitHub](https://github.com) and [Netlify](https://netlify.com) accounts and then click the following button.
@@ -174,11 +182,19 @@ For more info on customizing, look at the theme page: https://themes.gohugo.io/f
 Adding a project as a tile on your main page is a three part process. You can put in knitted `.html` RMarkdown files, or links to other websites (such as a https://shinyapp.io shiny app).
 
 1. Add a project Rmarkdown by adding a folder in the `content/projects` directory, and name your 
-RMarkdown html file `index.html` in the folder (You can use the `Add File` button right above the file contents). Refer to the `url` as `projects/choropleth` (look in the `content/projects` folder for examples.)
+RMarkdown html file `index.html` in the folder. The easiest way to do this is to create the folder on your machine with your `index.html` file in it, and then go to to **Add File >> Upload File**:
 
-2. (optional) Add an image for each tile in `static/image/projects/`, and refer to them in the `image` field as `projects/choropleth.png`.
+![](static/img/install/add_file.png)
 
-3. Now add a `[[params.tiles.showcase]]` entry for your tile. It's probably easiest to copy and paste one of the tiles and edit it for right now.
+2. Drag and drop your folder with the `index.html` file in there.
+
+![](static/img/install/upload_file.png)
+
+You'll refer to the `url` as `projects/FOLDERNAME` (for example: `projects/choropleth`) Look in the `content/projects` folder for other examples.
+
+3. (optional) Add an image for each tile in `static/image/projects/`, and refer to them in the `image` field as `projects/choropleth.png`.
+
+4. Now add a `[[params.tiles.showcase]]` entry for your tile. It's probably easiest to copy and paste one of the tiles and edit it for right now.
 
 You'll want to add your `url` to the `url` field, and if you have an `image`, add it to the `image` field. Make sure to edit the `title` and `subtitle`!
 
@@ -200,11 +216,19 @@ You'll want to add your `url` to the `url` field, and if you have an `image`, ad
       url = "projects/animal_crossing"
 ```
 
-Enjoy your updated portfolio!
+Enjoy your updated portfolio! If you have a lot of projects, make sure to pick and choose, and have a good `title` and `subtitle`. I like to use my research question in the `subtitle`, such as "Where are the Ready for R Students from?"
 
 ## Next Step: Cloning your project to your desktop
 
-The next thing you'll want to do is save a local copy to your machine. That way, you can edit it in RStudio using the `blogdown` package and work on it on your machine.
+The next thing you'll want to do is save a local copy to your machine. 
+
+That way, you can edit it in RStudio using the `blogdown` package and work on it on your machine.
+
+Please look at [Happy Git and GitHub for the useR](https://happygitwithr.com/) for more info on how to clone a project to your machine. 
+
+## Going Further
+
+This is just the tip of the iceberg. With some more learning, you'll be able to customize this site even further.
 
 * Learn more about Netlify, RMarkdown, and hugo file structure by watching [Sharing Online on Short Notice](http://rstd.io/sharing).
 
@@ -216,3 +240,5 @@ The next thing you'll want to do is save a local copy to your machine. That way,
 
 Be sure to share your web link with us! We want to see what you do with this.
 
+Happy portfolios!
+Ted
