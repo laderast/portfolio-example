@@ -50,7 +50,7 @@ Here's your brand new site:
 
 ## Customizing Your Site
 
-1. Now you should start customizing your site. You can do most of the updating on your GitHub Repository. To find it, you can click the "GitHub" Link in your deploy page, or find it at https://github.com/YOURUSERNAME/REPONAME, where YOURUSERNAME is your GitHub User Name, and REPONAME is the name of your repository. 
+1. Now you should start customizing your site. You can do most of the updating on your GitHub Repository page. To find it, you can click the "GitHub" Link in your deploy page, or find it at https://github.com/YOURUSERNAME/REPONAME, where YOURUSERNAME is your GitHub User Name, and REPONAME is the name of your repository. 
 
 ![Your repository link](static/img/install/your_repo.png)
 
