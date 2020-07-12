@@ -66,9 +66,12 @@ Here's your brand new site:
 
 ![Your repository link](static/img/install/your_repo.png)
 
-2. Click on the `config.toml` file and edit it (use the pencil in the top right corner) to start editing it.
+2. Click on the `config.toml` file:
 
 ![](static/img/install/config_toml.png)
+
+and click the pencil in the top right corner to start editing it:
+
 ![](static/img/install/edit_config.png)
 
 
