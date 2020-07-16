@@ -247,5 +247,13 @@ This is just the tip of the iceberg. With some more learning, you'll be able to 
 
 Be sure to share your web link with us! We want to see what you do with this.
 
+## Make this tutorial better!
+
+If there are any confusing bits that could be better worded, please mention them here: https://github.com/laderast/portfolio-example/issues/1
+
+## Share your Portfolio
+
+Share your portfolio site here: https://github.com/laderast/portfolio-example/issues/2
+
 Happy portfolios!
-Ted
+
