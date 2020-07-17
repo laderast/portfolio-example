@@ -255,5 +255,15 @@ If there are any confusing bits that could be better worded, please mention them
 
 Share your portfolio site here: https://github.com/laderast/portfolio-example/issues/2
 
+Or share it on twitter with the tag #ready4rportfolio!
+
+## Acknowledgements
+
+Thanks so much to Zhi Yang and Emi Tanaka for the inspiration.
+
+Thanks to Alison Hill, for telling me about the "Deploy to Netlify" button.
+
+Obviously big thanks to Yihui Xie for blogdown, and Marcus Virginia for the forty theme.
+
 Happy portfolios!
 
