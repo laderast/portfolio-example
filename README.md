@@ -265,5 +265,9 @@ Thanks to Alison Hill, for telling me about the "Deploy to Netlify" button.
 
 Obviously big thanks to Yihui Xie for blogdown, and Marcus Virginia for the forty theme.
 
+## Consider Buying Me a Coffee
+
+I have a ko-fi page at https://ko-fi.com/laderast - any donations would be greatly appreciated.
+
 Happy portfolios!
 
