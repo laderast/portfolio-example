@@ -85,6 +85,14 @@ disqusShortname = ""
   [params.tiles]
     enable = true
     # Display your showcases here.
+    
+    [[params.tiles.showcase]]
+      title = "Shiny App: Palmer Penguin Party"
+      subtitle = "Using decision trees to build a species predictor for the Palmer Penguin Dataset"
+      image = "projects/penguin_party.png"
+      url = "https://tladeras.shinyapps.io/penguin_party/"
+    
+    
     [[params.tiles.showcase]]
       title = "Project: Understanding Coffee Scores"
       subtitle = "Does processing method influence overall score?"
