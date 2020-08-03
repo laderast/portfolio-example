@@ -1,10 +1,17 @@
-# Simple Hugo Portfolio Template
+# Simple Portfolio Template
 
-Simple hugo portfolio example derived from the forty theme. Designed to be used for Data Scientists sharing their R projects.
+This repository provides a template for sharing work as an online portfolio (website).
+It was designed primarily for Data Scientists sharing their R projects,
+with each project representing an `html` file (such as the product of knitting `Rmd`)
+or a website (such as produced by a `shiny` app).
+
+The template portfolio is a simple example built with [`hugo`](https://gohugo.io) 
+derived from the [`forty`](https://themes.gohugo.io/forty/) theme. 
+
+To see a website using this template, 
+check out this example: https://hugo-portfolio-example.netlify.app/
 
 Inspired by Emi Tanaka's Showcase page: https://emitanaka.org/showcase/
-
-Take a look at the example website: https://hugo-portfolio-example.netlify.app/
 
 ## Why have a portfolio?
 
@@ -21,6 +28,7 @@ To get started, you can work from the GitHub and Netlify sites directly.
 ## Getting Started
 
 1. To get started, sign up for [GitHub](https://github.com) and [Netlify](https://netlify.com) accounts and then click the following button.
+Clicking the button will walk you through a series of steps that will copy this template to your GitHub account and connect it with Netlify.
 
 [![Deploy to Netlify Button](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/laderast/portfolio-example)
 
