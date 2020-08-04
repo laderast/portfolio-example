@@ -46,7 +46,7 @@ then click the `Save and Deploy` button:
 
 If you haven't authorized Netlify to connect to your account, you'll be asked to authorize it. Make sure to authorize before moving on.
 
-4. You'll then move on to what's called the `deploy` page. Notice that in the top right, there is a yellow **deploy in progress** indicator. Wait a second.
+4. You'll then move on to what's called the `deploy` page. Notice that in the top left, there is a yellow **deploy in progress** indicator. Wait a second.
 
 ![Deploy in progress](static/img/install/deploy1.png)
 
@@ -194,7 +194,7 @@ For more info on customizing, look at the theme page: https://themes.gohugo.io/f
 
 ## Adding your projects
 
-Adding a project as a tile on your main page is a three part process. You can put in knitted `.html` RMarkdown files, or links to other websites (such as a https://shinyapp.io shiny app).
+Adding a project as a tile on your main page is a multi-part process. You can put in knitted `.html` RMarkdown files, or links to other websites (such as a https://shinyapp.io shiny app).
 
 1. Add a project Rmarkdown by adding a folder in the `content/projects` directory, and name your 
 RMarkdown html file `index.html` in the folder. The easiest way to do this is to create the folder on your machine with your `index.html` file in it, and then go to to **Add File >> Upload File**:
