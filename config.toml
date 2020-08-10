@@ -92,6 +92,10 @@ disqusShortname = ""
       image = "projects/penguin_party.png"
       url = "https://tladeras.shinyapps.io/penguin_party/"
     
+    [[params.tiles.showcase]]
+      title = "Coffee Analysis"
+      subtitle = "Learning about Coffee"
+      url = "https://tladeras.shinyapps.io/penguin_party/"
     
     [[params.tiles.showcase]]
       title = "Project: Understanding Coffee Scores"
