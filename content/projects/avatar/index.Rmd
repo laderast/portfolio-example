@@ -2,7 +2,10 @@
 title: "Sentiment analysis of Avatar"
 author: "Ted Laderas"
 date: "`r Sys.Date()`"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
@@ -13,13 +16,9 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(tidytuesdayR)
-#This will open up in the help window
-tidytuesdayR::tt_available()
 ```
 
-# What was your dataset?
-
-Load your dataset in with the function below. The input is the date the dataset was issued. You should be able to get this from the `tt_available()` function.
+# Loading the Data
 
 ```{r}
 #incoming data comes in as a list
@@ -44,7 +43,7 @@ Does the sentiment of each character change over the multiple seasons? That is, 
 
 I will attempt to summarize the sentiment of each character across each episode.
 
-Using `tidytext`
+Using `tidytext` to `unnest_tokens()` - that is, split each line into 1 word per row.
 
 ```{r}
 library(tidytext)
@@ -73,6 +72,8 @@ line_count[1:20,] %>%
 
 
 # Understanding Each Character's Journey
+
+Using `tidytext`, I do a sentiment analysis of each episode (here called a `chapter`) to determine the overal sentiment for a character.
 
 ```{r}
 bing <- get_sentiments("bing")
@@ -109,7 +110,9 @@ out_plot <- ggplot(sentiment_index) +
   geom_col(show_legend = FALSE) +
   facet_wrap(~character, ncol=2) +
   labs(title= "Each Character's Sentiment Journey", x="Episode Number",
-       subtitle = "mouse over each graph for more information")
+       subtitle = "mouse over each graph for more information") + 
+  geom_vline(xintercept = 21, lty=2) +
+  geom_vline(xintercept = 41, lty=2)
 
 plotly::ggplotly(out_plot)
 
@@ -131,15 +134,18 @@ out_plot <- ggplot(zuko) +
   annotate(geom="text", x=53, y = 11, label = "Where Zuko\ntrains Aang") +
   labs(title= "Zuko has lots of ups and downs", x="Episode Number",
        subtitle = "mouse over for more episode information") +
-  ylim(c(-13, 13))
+  ylim(c(-13, 13)) +
+  geom_vline(xintercept = 21, lty=2) +
+  geom_vline(xintercept = 41, lty=2)
+
 
 plotly::ggplotly(out_plot)
 ```
 
 
-## Aang and Zuko's Journeys
+# Aang and Zuko's Journeys
 
-Plotting the sentiment journey of Zuko and Aang together.
+Plotting the sentiment journey of Zuko and Aang together shows that they often mirror each other, except in the last parts of Book 3.
 
 ```{r}
 zuko_aang <- sentiment_index %>%
@@ -151,7 +157,10 @@ out_plot <- ggplot(zuko_aang) +
   labs(title= "Aang and Zuko's Journeys Often Mirror Each Other", 
        x="Episode Number",
        subtitle = "mouse over for more episode information") +
-  ylim(c(-13, 13))
+  ylim(c(-13, 13)) +
+    geom_vline(xintercept = 21, lty=2) +
+  geom_vline(xintercept = 41, lty=2)
+
 
 plotly::ggplotly(out_plot)
 
@@ -169,7 +178,9 @@ out_plot <- ggplot(iroh) +
   geom_col(show_legend = FALSE) +
   labs(title= "Iroh is just so chill and positive", x="Episode Number",
        subtitle = "mouse over for more episode information") +
-  ylim(c(-13, 13))
+  ylim(c(-13, 13)) +
+    geom_vline(xintercept = 21, lty=2) +
+  geom_vline(xintercept = 41, lty=2)
 
 plotly::ggplotly(out_plot)
 ```
