@@ -92,7 +92,6 @@ disqusShortname = ""
       image = "projects/zuko.png"
       url = "projects/avatar"
 
-    
     [[params.tiles.showcase]]
       title = "Shiny App: Palmer Penguin Party"
       subtitle = "Using decision trees to build a species predictor for the Palmer Penguin Dataset"
