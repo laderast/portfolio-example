@@ -87,6 +87,13 @@ disqusShortname = ""
     # Display your showcases here.
     
     [[params.tiles.showcase]]
+      title = "Avatar Sentiment Journeys"
+      subtitle = "Understanding each character's journey through sentiment analysis"
+      image = "projects/zuko.png"
+      url = "projects/avatar"
+
+    
+    [[params.tiles.showcase]]
       title = "Shiny App: Palmer Penguin Party"
       subtitle = "Using decision trees to build a species predictor for the Palmer Penguin Dataset"
       image = "projects/penguin_party.png"
