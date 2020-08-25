@@ -87,6 +87,13 @@ disqusShortname = ""
     # Display your showcases here.
     
     [[params.tiles.showcase]]
+      title = "Chopped Judges"
+      subtitle = "Are judges associated with overall episode rating?"
+      image = "projects/chopped.png"
+      url = "projects/chopped"
+
+    
+    [[params.tiles.showcase]]
       title = "Avatar Sentiment Journeys"
       subtitle = "Understanding each character's journey through sentiment analysis"
       image = "projects/zuko.png"

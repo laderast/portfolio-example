@@ -1,0 +1,131 @@
+---
+title: "Chopped Episodes"
+author: "Ted Laderas"
+date: "`r Sys.Date()`"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+# Look at the available datasets
+
+```{r eval=FALSE}
+library(tidytuesdayR)
+#This will open up in the help window
+tidytuesdayR::tt_available()
+```
+
+# What was your dataset?
+
+Load your dataset in with the function below. The input is the date the dataset was issued. You should be able to get this from the `tt_available()` function.
+
+```{r}
+#incoming data comes in as a list
+datasets <- tidytuesdayR::tt_load("2020-08-25")
+#show the names of the individual datasets
+names(datasets)
+```
+
+```{r}
+chopped <- datasets$chopped
+```
+
+# Initial EDA
+
+```{r}
+visdat::vis_dat(chopped)
+```
+
+```{r}
+skimr::skim(chopped)
+```
+
+# What was your question?
+
+Given your inital exploration of the data, what was the question you wanted to answer?
+
+> Which Judge is associated with the highest ratings?
+
+## Fixing the data
+
+Need to recode some names here. Also collapse `judge1`, `judge2` and `judge3` into a single column using `pivot_longer()`.
+
+```{r}
+chopped_collapsed <- chopped %>%
+  tidyr::pivot_longer(cols=contains("judge"), names_to="judge", values_to="name") %>%
+  mutate(name=fct_recode(name, `Aarón Sanchez`="Aarón Sánchez", `Amanda Freitag` = "Amanda Freita")) 
+```
+
+## Frequency of Judge appearances
+
+Who is the most frequent judge on Chopped?
+
+```{r}
+chopped_counts <- chopped_collapsed %>% 
+  count(name) %>%
+  arrange(desc(n))
+
+knitr::kable(chopped_counts)
+```
+
+## Boxplot of Judge versus Ratings
+
+```{r}
+chopped_counts_high <- chopped_counts %>% filter(n > 4) 
+
+frequent_judges <- chopped_counts_high %>% pull(name)
+
+chopped_collapsed %>%
+  tidyr::drop_na(episode_rating) %>%
+  filter(name %in% frequent_judges) %>%
+  mutate(name=fct_reorder(name, episode_rating, median)) %>%
+  ggplot() +
+  aes(x=name, y=episode_rating, fill=name) +
+  geom_boxplot() + 
+  geom_text(aes(x = name, y= 10, label=n), data=chopped_counts_high) +
+  ylim(c(5.5, 10.5)) +
+  theme(legend.position = "none") +
+  coord_flip() +
+  labs(title = "Chopped Judges by Median Rating", 
+       subtitle = "Alton and Tiffani FTW")
+```
+
+## Alex's Progression
+
+Alex Guarnaschelli is the most frequent judge. Here's her overall progression over episodes.
+
+```{r}
+chopped_collapsed %>%
+  filter(name== "Alex Guarnaschelli") %>%
+  ggplot() +
+  aes(x=series_episode, y=episode_rating, color=season) +
+  geom_point() +
+  geom_smooth()
+```
+
+## Judges versus ratings
+
+Doing something similar for those judges who have 16 or more appearances:
+
+
+```{r}
+frequent_judges <-  chopped_counts %>% 
+  filter(n > 15) %>% 
+  pull(name)
+
+chopped_collapsed %>%
+  filter(name %in% frequent_judges) %>%
+  ggplot() +
+  aes(x=series_episode, y=episode_rating) +
+  geom_point() +
+  geom_smooth(aes(color=name)) +
+  facet_wrap(~name) +
+  ylim(c(6, 9.5)) +
+  theme(legend.position = "none")
+```
