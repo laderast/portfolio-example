@@ -55,7 +55,9 @@ parsed_tweets <- tweets %>%
 
 write_csv(parsed_tweets, file = "cleaned_tweets_incomplete.csv")
 
-DT::datatable(parsed_tweets)
+out <- DT::datatable(parsed_tweets)
+
+widgetframe::frameWidget(out)
 ```
 
 At this point, I realized that I just needed to hand annotate the rest of the tweets, rather than wasting my time trying to parse the rest of the cases. So I pulled everything into Excel and just annotated the ones which I couldn't pull from.
@@ -64,10 +66,14 @@ At this point, I realized that I just needed to hand annotate the rest of the tw
 
 Here's all of the tweets from this thread (naysayers included). They are in somewhat order (longer threads are grouped).
 
-```{r}
+Here's a [link to the cleaned CSV file](cleaned_tweets.csv)
+
+```{r message=FALSE}
 cleaned_tweets <- read_csv("cleaned_tweets.csv")
 
-DT::datatable(cleaned_tweets)
+out <- DT::datatable(cleaned_tweets)
+
+widgetframe::frameWidget(out)
 ```
 
 ## Top 20 function suggestions
