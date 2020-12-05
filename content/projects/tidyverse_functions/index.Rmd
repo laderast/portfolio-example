@@ -73,22 +73,6 @@ cleaned_tweets <- read_csv("cleaned_tweets.csv") %>% select(-parent_thread) %>%
 knitr::kable(cleaned_tweets)
 ```
 
-## Top 20 function suggestions
-
-Here are the top 20 suggestions by frequency. Unsurprisingly, `case_when()` (which I cover in the main course), has the most number of suggestions, because it's so useful. `tidyr::pivot_wider()` and `tidyr::pivot_longer()` are also covered in the course.
-
-
-There are some others which were new to me, and a bit of a surprise, such as `coalesce()`, `fill()`. 
-
-
-```{r}
-cleaned_tweets %>%
-  janitor::tabyl(funcs) %>%
-  filter(!is.na(funcs)) %>%
-  arrange(desc(n)) %>%
-  slice(1:20) %>%
-  gt::gt() 
-```
 
 ## Some of my favorite suggestions
 
@@ -117,6 +101,24 @@ I think that `deframe()` and `enframe()` are really exciting, since I do this op
 `unite()`, `separate()` and `separate_rows()` also had their own contingent: 
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I find myself using tidyr::unite() a lot to clean messy data - particularly useful for making unique and informative ID&#39;s for each row. coalesce() and fill() are also little known gems! :)</p>&mdash; Guy Sutton🐝🌾🇿🇦🇿🇼 (@Guy_F_Sutton) <a href="https://twitter.com/Guy_F_Sutton/status/1333668370668003329?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+## Functions by frequency
+
+Here are the function suggestions by frequency. Unsurprisingly, `case_when()` (which I cover in the main course), has the most number of suggestions, because it's so useful. `tidyr::pivot_wider()` and `tidyr::pivot_longer()` are also covered in the course.
+
+
+There are some others which were new to me, and a bit of a surprise, such as `coalesce()`, `fill()`. 
+
+
+```{r}
+cleaned_tweets %>%
+  janitor::tabyl(funcs) %>%
+  filter(!is.na(funcs)) %>%
+  arrange(desc(n)) %>%
+  gt::gt() 
+```
+
 
 ## Thank You
 
