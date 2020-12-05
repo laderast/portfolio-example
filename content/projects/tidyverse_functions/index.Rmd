@@ -55,7 +55,7 @@ parsed_tweets <- tweets %>%
 
 write_csv(parsed_tweets, file = "cleaned_tweets_incomplete.csv")
 
-knitr::kable(parsed_tweets[1:10,])
+knitr::kable(parsed_tweets[1:10,-c(5:6)])
 ```
 
 At this point, I realized that I just needed to hand annotate the rest of the tweets, rather than wasting my time trying to parse the rest of the cases. So I pulled everything into Excel and just annotated the ones which I couldn't pull from.
