@@ -62,7 +62,9 @@ I thought I would try and summarize everyone's suggestions and compile a list of
 
 This wrote the tweet information into a CSV file.
 
-Then I started parsing the data. I wrote a couple of functions, `remove_users_from_text()` and `get_funcs()` to try and clean the data a bit, and used a relatively simple regular expression to try to return the function.
+Then I started parsing the data. I wrote a couple of functions, `remove_users_from_text()`, which removes the users from a tweet (by looking for words that begin with `@`) and `get_funcs()`, which uses a relatively simple regular expression to try to return the function (it looks for paired parentheses `()` or an underscore "-" to extract the functions). It actually works pretty well, and grabs most of the functions.
+
+Then I use `separate_rows()` to split the multiple functions into their separate rows. This makes it easier to tally all the functions.
 
 ```{r}
 remove_users_from_text <- function(col){
@@ -91,22 +93,6 @@ knitr::kable(parsed_tweets[1:10,-c(5:6)])
 
 At this point, I realized that I just needed to hand annotate the rest of the tweets, rather than wasting my time trying to parse the rest of the cases. So I pulled everything into Excel and just annotated the ones which I couldn't pull from.
 
-## Cleaned Tweets and Threads
-
-Here's all of the tweets from this thread (naysayers included). They are in somewhat order (longer threads are grouped).
-
-Here's a [link to the cleaned CSV file](cleaned_tweets.csv)
-
-```{r message=FALSE}
-cleaned_tweets <- read_csv("cleaned_tweets.csv") %>% select(-parent_thread) %>%
-  mutate(user = paste0("[",user,"](",reply,")")) %>%
-  select(-reply)
-
-knitr::kable(cleaned_tweets)
-```
-
-
-
 ## Functions by frequency
 
 Here are the function suggestions by frequency. Unsurprisingly, `case_when()` (which I cover in the main course), has the most number of suggestions, because it's so useful. `tidyr::pivot_wider()` and `tidyr::pivot_longer()` are also covered in the course.
@@ -116,12 +102,32 @@ There are some others which were new to me, and a bit of a surprise, such as `co
 
 
 ```{r}
+cleaned_tweets <- read_csv("cleaned_tweets.csv") %>% select(-parent_thread) %>%
+  mutate(user = paste0("[",user,"](",reply,")")) %>%
+  select(-reply)
+
 cleaned_tweets %>%
   janitor::tabyl(funcs) %>%
   filter(!is.na(funcs)) %>%
   arrange(desc(n)) %>%
   knitr::kable()
 ```
+
+
+## Cleaned Tweets and Threads
+
+Here's all of the tweets from this thread (naysayers included). They are in somewhat order (longer threads are grouped).
+
+Here's a [link to the cleaned CSV file](cleaned_tweets.csv)
+
+```{r message=FALSE}
+
+
+knitr::kable(cleaned_tweets)
+```
+
+
+
 
 
 ## Thank You
