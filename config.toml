@@ -89,6 +89,7 @@ disqusShortname = ""
       title = "Lesser Known Tidyverse Functions"
       subtitle = "Parsing a twitter thread about tidyverse functions"
       url = "projects/tidyverse_functions"
+      image = "projects/top_functions.jpg"
 
     
     [[params.tiles.showcase]]
