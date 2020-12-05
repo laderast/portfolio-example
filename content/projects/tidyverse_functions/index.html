@@ -1813,1168 +1813,829 @@ I find myself using tidyr::unite() a lot to clean messy data - particularly usef
   janitor::tabyl(funcs) %&gt;%
   filter(!is.na(funcs)) %&gt;%
   arrange(desc(n)) %&gt;%
-  gt::gt() </code></pre>
-<style>html {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
-}
-
-#cnjvctjise .gt_table {
-  display: table;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-  color: #333333;
-  font-size: 16px;
-  font-weight: normal;
-  font-style: normal;
-  background-color: #FFFFFF;
-  width: auto;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #A8A8A8;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #A8A8A8;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-}
-
-#cnjvctjise .gt_heading {
-  background-color: #FFFFFF;
-  text-align: center;
-  border-bottom-color: #FFFFFF;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#cnjvctjise .gt_title {
-  color: #333333;
-  font-size: 125%;
-  font-weight: initial;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  border-bottom-color: #FFFFFF;
-  border-bottom-width: 0;
-}
-
-#cnjvctjise .gt_subtitle {
-  color: #333333;
-  font-size: 85%;
-  font-weight: initial;
-  padding-top: 0;
-  padding-bottom: 4px;
-  border-top-color: #FFFFFF;
-  border-top-width: 0;
-}
-
-#cnjvctjise .gt_bottom_border {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cnjvctjise .gt_col_headings {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-}
-
-#cnjvctjise .gt_col_heading {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  padding-left: 5px;
-  padding-right: 5px;
-  overflow-x: hidden;
-}
-
-#cnjvctjise .gt_column_spanner_outer {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: normal;
-  text-transform: inherit;
-  padding-top: 0;
-  padding-bottom: 0;
-  padding-left: 4px;
-  padding-right: 4px;
-}
-
-#cnjvctjise .gt_column_spanner_outer:first-child {
-  padding-left: 0;
-}
-
-#cnjvctjise .gt_column_spanner_outer:last-child {
-  padding-right: 0;
-}
-
-#cnjvctjise .gt_column_spanner {
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: bottom;
-  padding-top: 5px;
-  padding-bottom: 6px;
-  overflow-x: hidden;
-  display: inline-block;
-  width: 100%;
-}
-
-#cnjvctjise .gt_group_heading {
-  padding: 8px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#cnjvctjise .gt_empty_group_heading {
-  padding: 0.5px;
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  vertical-align: middle;
-}
-
-#cnjvctjise .gt_from_md > :first-child {
-  margin-top: 0;
-}
-
-#cnjvctjise .gt_from_md > :last-child {
-  margin-bottom: 0;
-}
-
-#cnjvctjise .gt_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin: 10px;
-  border-top-style: solid;
-  border-top-width: 1px;
-  border-top-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 1px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 1px;
-  border-right-color: #D3D3D3;
-  vertical-align: middle;
-  overflow-x: hidden;
-}
-
-#cnjvctjise .gt_stub {
-  color: #333333;
-  background-color: #FFFFFF;
-  font-size: 100%;
-  font-weight: initial;
-  text-transform: inherit;
-  border-right-style: solid;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-  padding-left: 12px;
-}
-
-#cnjvctjise .gt_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cnjvctjise .gt_first_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-}
-
-#cnjvctjise .gt_grand_summary_row {
-  color: #333333;
-  background-color: #FFFFFF;
-  text-transform: inherit;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#cnjvctjise .gt_first_grand_summary_row {
-  padding-top: 8px;
-  padding-bottom: 8px;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-top-style: double;
-  border-top-width: 6px;
-  border-top-color: #D3D3D3;
-}
-
-#cnjvctjise .gt_striped {
-  background-color: rgba(128, 128, 128, 0.05);
-}
-
-#cnjvctjise .gt_table_body {
-  border-top-style: solid;
-  border-top-width: 2px;
-  border-top-color: #D3D3D3;
-  border-bottom-style: solid;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-}
-
-#cnjvctjise .gt_footnotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#cnjvctjise .gt_footnote {
-  margin: 0px;
-  font-size: 90%;
-  padding: 4px;
-}
-
-#cnjvctjise .gt_sourcenotes {
-  color: #333333;
-  background-color: #FFFFFF;
-  border-bottom-style: none;
-  border-bottom-width: 2px;
-  border-bottom-color: #D3D3D3;
-  border-left-style: none;
-  border-left-width: 2px;
-  border-left-color: #D3D3D3;
-  border-right-style: none;
-  border-right-width: 2px;
-  border-right-color: #D3D3D3;
-}
-
-#cnjvctjise .gt_sourcenote {
-  font-size: 90%;
-  padding: 4px;
-}
-
-#cnjvctjise .gt_left {
-  text-align: left;
-}
-
-#cnjvctjise .gt_center {
-  text-align: center;
-}
-
-#cnjvctjise .gt_right {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-}
-
-#cnjvctjise .gt_font_normal {
-  font-weight: normal;
-}
-
-#cnjvctjise .gt_font_bold {
-  font-weight: bold;
-}
-
-#cnjvctjise .gt_font_italic {
-  font-style: italic;
-}
-
-#cnjvctjise .gt_super {
-  font-size: 65%;
-}
-
-#cnjvctjise .gt_footnote_marks {
-  font-style: italic;
-  font-size: 65%;
-}
-</style>
-<div id="cnjvctjise" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
-  
-  <thead class="gt_col_headings">
-    <tr>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1">funcs</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">n</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">percent</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1">valid_percent</th>
-    </tr>
-  </thead>
-  <tbody class="gt_table_body">
-    <tr>
-      <td class="gt_row gt_left">case_when()</td>
-      <td class="gt_row gt_right">15</td>
-      <td class="gt_row gt_right">0.056179775</td>
-      <td class="gt_row gt_right">0.067264574</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">pivot_longer()</td>
-      <td class="gt_row gt_right">6</td>
-      <td class="gt_row gt_right">0.022471910</td>
-      <td class="gt_row gt_right">0.026905830</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">pivot_wider()</td>
-      <td class="gt_row gt_right">6</td>
-      <td class="gt_row gt_right">0.022471910</td>
-      <td class="gt_row gt_right">0.026905830</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">coalesce()</td>
-      <td class="gt_row gt_right">5</td>
-      <td class="gt_row gt_right">0.018726592</td>
-      <td class="gt_row gt_right">0.022421525</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">fill()</td>
-      <td class="gt_row gt_right">5</td>
-      <td class="gt_row gt_right">0.018726592</td>
-      <td class="gt_row gt_right">0.022421525</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">across()</td>
-      <td class="gt_row gt_right">4</td>
-      <td class="gt_row gt_right">0.014981273</td>
-      <td class="gt_row gt_right">0.017937220</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">lead()</td>
-      <td class="gt_row gt_right">4</td>
-      <td class="gt_row gt_right">0.014981273</td>
-      <td class="gt_row gt_right">0.017937220</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">separate()</td>
-      <td class="gt_row gt_right">4</td>
-      <td class="gt_row gt_right">0.014981273</td>
-      <td class="gt_row gt_right">0.017937220</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">separate_rows()</td>
-      <td class="gt_row gt_right">4</td>
-      <td class="gt_row gt_right">0.014981273</td>
-      <td class="gt_row gt_right">0.017937220</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">str_detect()</td>
-      <td class="gt_row gt_right">4</td>
-      <td class="gt_row gt_right">0.014981273</td>
-      <td class="gt_row gt_right">0.017937220</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">uncount()</td>
-      <td class="gt_row gt_right">4</td>
-      <td class="gt_row gt_right">0.014981273</td>
-      <td class="gt_row gt_right">0.017937220</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">anti_join()</td>
-      <td class="gt_row gt_right">3</td>
-      <td class="gt_row gt_right">0.011235955</td>
-      <td class="gt_row gt_right">0.013452915</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">complete()</td>
-      <td class="gt_row gt_right">3</td>
-      <td class="gt_row gt_right">0.011235955</td>
-      <td class="gt_row gt_right">0.013452915</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">fct_reorder()</td>
-      <td class="gt_row gt_right">3</td>
-      <td class="gt_row gt_right">0.011235955</td>
-      <td class="gt_row gt_right">0.013452915</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">lag()</td>
-      <td class="gt_row gt_right">3</td>
-      <td class="gt_row gt_right">0.011235955</td>
-      <td class="gt_row gt_right">0.013452915</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">map()</td>
-      <td class="gt_row gt_right">3</td>
-      <td class="gt_row gt_right">0.011235955</td>
-      <td class="gt_row gt_right">0.013452915</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">replace_na()</td>
-      <td class="gt_row gt_right">3</td>
-      <td class="gt_row gt_right">0.011235955</td>
-      <td class="gt_row gt_right">0.013452915</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">slice()</td>
-      <td class="gt_row gt_right">3</td>
-      <td class="gt_row gt_right">0.011235955</td>
-      <td class="gt_row gt_right">0.013452915</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">str_wrap()</td>
-      <td class="gt_row gt_right">3</td>
-      <td class="gt_row gt_right">0.011235955</td>
-      <td class="gt_row gt_right">0.013452915</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">{forcats}</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">{tidyeval}</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">between()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">breaks_pretty()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">distinct()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">enframe()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">fct_infreq()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">floor_date()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">group_indices()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">group_map()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">left_join()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">mutate()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">nest()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">partial()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">pluck()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">pull()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">recode()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">safely()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">tabyl()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">unite()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">unnest()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">walk()</td>
-      <td class="gt_row gt_right">2</td>
-      <td class="gt_row gt_right">0.007490637</td>
-      <td class="gt_row gt_right">0.008968610</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">*_join()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">{janitor}</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">{readr}</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">{tsibble}</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">add_count</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">add_count()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">add_predictions()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">arrange()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">as_mapper()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">case_when</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">ceiling_date()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">count()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">crossing()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">cut_interval()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">cut_number ()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">cut_width()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">deframe()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">dense_rank()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">dplyr::first()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">dplyr::last()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">drop_na</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">every()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">expand_grid()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">fct_explicit_na()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">fct_inorder()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">fct_relevel()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">filter()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">first()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">force_tz()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">gather()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">geom_count()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">glimpse()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">grepl()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">group_</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">group_by()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">group_walk()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">hoist()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">if()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">if_else()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">janitor::clean_names()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">keep_all</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">labs()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">last()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">left_join</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">make_valid()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">map_*()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">map_dfr()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">mutate_at()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">mutate_if()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">n()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">n_distinct</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">n_distinct()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">n_tile()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">na_if()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">near()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">nest_by()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">none()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">nth()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">ntile()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">parse_</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">parse_date_time()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">paste()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">pivot_longer</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">possibly()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">problems()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">read_csv()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">read_delim()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">recodeI()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">reduce()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">relocate()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">select()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">skim()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">slice_max()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">slice_min()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">some()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">spread()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">stat_summary</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">str_glue()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">str_match()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">str_remove()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">str_trim()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">str_which()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">string_extract</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">summarise()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">tidy()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">vec_of_names</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">View()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">with_groups()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">with_tz()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">write_csv()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">ymd*()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">ymd_hms()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-    <tr>
-      <td class="gt_row gt_left">zap_label()</td>
-      <td class="gt_row gt_right">1</td>
-      <td class="gt_row gt_right">0.003745318</td>
-      <td class="gt_row gt_right">0.004484305</td>
-    </tr>
-  </tbody>
-  
-  
-</table></div>
+  knitr::kable()</code></pre>
+<table>
+<thead>
+<tr class="header">
+<th align="left">funcs</th>
+<th align="right">n</th>
+<th align="right">percent</th>
+<th align="right">valid_percent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">case_when()</td>
+<td align="right">15</td>
+<td align="right">0.0561798</td>
+<td align="right">0.0672646</td>
+</tr>
+<tr class="even">
+<td align="left">pivot_longer()</td>
+<td align="right">6</td>
+<td align="right">0.0224719</td>
+<td align="right">0.0269058</td>
+</tr>
+<tr class="odd">
+<td align="left">pivot_wider()</td>
+<td align="right">6</td>
+<td align="right">0.0224719</td>
+<td align="right">0.0269058</td>
+</tr>
+<tr class="even">
+<td align="left">coalesce()</td>
+<td align="right">5</td>
+<td align="right">0.0187266</td>
+<td align="right">0.0224215</td>
+</tr>
+<tr class="odd">
+<td align="left">fill()</td>
+<td align="right">5</td>
+<td align="right">0.0187266</td>
+<td align="right">0.0224215</td>
+</tr>
+<tr class="even">
+<td align="left">across()</td>
+<td align="right">4</td>
+<td align="right">0.0149813</td>
+<td align="right">0.0179372</td>
+</tr>
+<tr class="odd">
+<td align="left">lead()</td>
+<td align="right">4</td>
+<td align="right">0.0149813</td>
+<td align="right">0.0179372</td>
+</tr>
+<tr class="even">
+<td align="left">separate()</td>
+<td align="right">4</td>
+<td align="right">0.0149813</td>
+<td align="right">0.0179372</td>
+</tr>
+<tr class="odd">
+<td align="left">separate_rows()</td>
+<td align="right">4</td>
+<td align="right">0.0149813</td>
+<td align="right">0.0179372</td>
+</tr>
+<tr class="even">
+<td align="left">str_detect()</td>
+<td align="right">4</td>
+<td align="right">0.0149813</td>
+<td align="right">0.0179372</td>
+</tr>
+<tr class="odd">
+<td align="left">uncount()</td>
+<td align="right">4</td>
+<td align="right">0.0149813</td>
+<td align="right">0.0179372</td>
+</tr>
+<tr class="even">
+<td align="left">anti_join()</td>
+<td align="right">3</td>
+<td align="right">0.0112360</td>
+<td align="right">0.0134529</td>
+</tr>
+<tr class="odd">
+<td align="left">complete()</td>
+<td align="right">3</td>
+<td align="right">0.0112360</td>
+<td align="right">0.0134529</td>
+</tr>
+<tr class="even">
+<td align="left">fct_reorder()</td>
+<td align="right">3</td>
+<td align="right">0.0112360</td>
+<td align="right">0.0134529</td>
+</tr>
+<tr class="odd">
+<td align="left">lag()</td>
+<td align="right">3</td>
+<td align="right">0.0112360</td>
+<td align="right">0.0134529</td>
+</tr>
+<tr class="even">
+<td align="left">map()</td>
+<td align="right">3</td>
+<td align="right">0.0112360</td>
+<td align="right">0.0134529</td>
+</tr>
+<tr class="odd">
+<td align="left">replace_na()</td>
+<td align="right">3</td>
+<td align="right">0.0112360</td>
+<td align="right">0.0134529</td>
+</tr>
+<tr class="even">
+<td align="left">slice()</td>
+<td align="right">3</td>
+<td align="right">0.0112360</td>
+<td align="right">0.0134529</td>
+</tr>
+<tr class="odd">
+<td align="left">str_wrap()</td>
+<td align="right">3</td>
+<td align="right">0.0112360</td>
+<td align="right">0.0134529</td>
+</tr>
+<tr class="even">
+<td align="left">{forcats}</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="odd">
+<td align="left">{tidyeval}</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="even">
+<td align="left">between()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="odd">
+<td align="left">breaks_pretty()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="even">
+<td align="left">distinct()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="odd">
+<td align="left">enframe()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="even">
+<td align="left">fct_infreq()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="odd">
+<td align="left">floor_date()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="even">
+<td align="left">group_indices()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="odd">
+<td align="left">group_map()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="even">
+<td align="left">left_join()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="odd">
+<td align="left">mutate()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="even">
+<td align="left">nest()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="odd">
+<td align="left">partial()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="even">
+<td align="left">pluck()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="odd">
+<td align="left">pull()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="even">
+<td align="left">recode()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="odd">
+<td align="left">safely()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="even">
+<td align="left">tabyl()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="odd">
+<td align="left">unite()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="even">
+<td align="left">unnest()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="odd">
+<td align="left">walk()</td>
+<td align="right">2</td>
+<td align="right">0.0074906</td>
+<td align="right">0.0089686</td>
+</tr>
+<tr class="even">
+<td align="left">()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">*_join()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">{janitor}</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">{readr}</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">{tsibble}</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">add_count</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">add_count()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">add_predictions()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">arrange()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">as_mapper()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">case_when</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">ceiling_date()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">count()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">crossing()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">cut_interval()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">cut_number ()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">cut_width()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">deframe()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">dense_rank()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">dplyr::first()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">dplyr::last()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">drop_na</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">every()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">expand_grid()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">fct_explicit_na()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">fct_inorder()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">fct_relevel()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">filter()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">first()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">force_tz()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">gather()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">geom_count()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">glimpse()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">grepl()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">group_</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">group_by()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">group_walk()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">hoist()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">if()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">if_else()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">janitor::clean_names()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">keep_all</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">labs()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">last()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">left_join</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">make_valid()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">map_*()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">map_dfr()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">mutate_at()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">mutate_if()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">n()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">n_distinct</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">n_distinct()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">n_tile()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">na_if()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">near()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">nest_by()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">none()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">nth()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">ntile()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">parse_</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">parse_date_time()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">paste()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">pivot_longer</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">possibly()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">problems()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">read_csv()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">read_delim()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">recodeI()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">reduce()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">relocate()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">select()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">skim()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">slice_max()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">slice_min()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">some()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">spread()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">stat_summary</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">str_glue()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">str_match()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">str_remove()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">str_trim()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">str_which()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">string_extract</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">summarise()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">tidy()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">vec_of_names</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">View()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">with_groups()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">with_tz()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">write_csv()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">ymd*()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="even">
+<td align="left">ymd_hms()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+<tr class="odd">
+<td align="left">zap_label()</td>
+<td align="right">1</td>
+<td align="right">0.0037453</td>
+<td align="right">0.0044843</td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="thank-you" class="section level2">
 <h2>Thank You</h2>

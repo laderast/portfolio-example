@@ -116,7 +116,7 @@ cleaned_tweets %>%
   janitor::tabyl(funcs) %>%
   filter(!is.na(funcs)) %>%
   arrange(desc(n)) %>%
-  gt::gt() 
+  knitr::kable()
 ```
 
 
