@@ -67,7 +67,9 @@ Here's all of the tweets from this thread (naysayers included). They are in some
 Here's a [link to the cleaned CSV file](cleaned_tweets.csv)
 
 ```{r message=FALSE}
-cleaned_tweets <- read_csv("cleaned_tweets.csv") %>% select(-parent_thread) 
+cleaned_tweets <- read_csv("cleaned_tweets.csv") %>% select(-parent_thread) %>%
+  mutate(user = paste0("[",user,"](",reply,")")) %>%
+  select(-reply)
 knitr::kable(cleaned_tweets)
 ```
 
