@@ -126,8 +126,13 @@ Here's a [link to the cleaned CSV file](cleaned_tweets.csv)
 knitr::kable(cleaned_tweets)
 ```
 
+## Source Code and Data
 
+Feel free to use and modify. 
 
+- [RMarkdown file](index.Rmd) used to generate this post
+- [Python Twitter Scraper (by Giovanni Mellini)](https://github.com/gmellini/twitter-scraper) - I used this because there wasn't a ready made recipe in `rtweet` to extract replies - you have to use recursion to extract all of the thread replies that belong to a tweet, and this was easily modifiable. 
+- [Cleaned Tweets File (CSV)](cleaned_tweets.csv)
 
 
 ## Thank You
