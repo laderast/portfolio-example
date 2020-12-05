@@ -71,7 +71,7 @@ cleaned_tweets <- read_csv("cleaned_tweets.csv") %>% select(-parent_thread) %>%
   mutate(user = paste0("[",user,"](",reply,")")) %>%
   select(-reply)
 
-gt::gt(cleaned_tweets)
+DT::datatable(cleaned_tweets)
 ```
 
 
