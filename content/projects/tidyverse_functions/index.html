@@ -17,8 +17,6 @@ output: html_document
 <script src="index_files/dt-core/js/jquery.dataTables.min.js"></script>
 <link href="index_files/crosstalk/css/crosstalk.css" rel="stylesheet" />
 <script src="index_files/crosstalk/js/crosstalk.min.js"></script>
-<script src="index_files/pymjs/pym.v1.js"></script>
-<script src="index_files/widgetframe-binding/widgetframe.js"></script>
 
 
 <div id="the-assignment" class="section level1">
@@ -58,23 +56,1998 @@ parsed_tweets &lt;- tweets %&gt;%
 
 write_csv(parsed_tweets, file = &quot;cleaned_tweets_incomplete.csv&quot;)
 
-out &lt;- DT::datatable(parsed_tweets)
-
-widgetframe::frameWidget(out)</code></pre>
-<div id="htmlwidget-1" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-1.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+knitr::kable(parsed_tweets[1:10,])</code></pre>
+<table>
+<colgroup>
+<col width="5%" />
+<col width="4%" />
+<col width="3%" />
+<col width="54%" />
+<col width="17%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">date</th>
+<th align="left">user</th>
+<th align="left">funcs</th>
+<th align="left">text</th>
+<th align="left">reply</th>
+<th align="left">parent_thread</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">02/12/2020 16:12:48</td>
+<td align="left">NathanKhadaroo</td>
+<td align="left">expand_grid()</td>
+<td align="left">tidyr::expand_grid() is really useful for creating new datasets to see how fitted models perform on new data!</td>
+<td align="left"><a href="https://twitter.com/NathanKhadaroo/status/1334153550486769665" class="uri">https://twitter.com/NathanKhadaroo/status/1334153550486769665</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333480918158254082" class="uri">https://twitter.com/tladeras/status/1333480918158254082</a></td>
+</tr>
+<tr class="even">
+<td align="left">02/12/2020 06:43:45</td>
+<td align="left">sleepydatum</td>
+<td align="left">anti_join()</td>
+<td align="left">dplyr::anti_join() is my personal favorite.</td>
+<td align="left"><a href="https://twitter.com/sleepydatum/status/1334010344704905216" class="uri">https://twitter.com/sleepydatum/status/1334010344704905216</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333480918158254082" class="uri">https://twitter.com/tladeras/status/1333480918158254082</a></td>
+</tr>
+<tr class="odd">
+<td align="left">02/12/2020 01:19:24</td>
+<td align="left">dragonflystats</td>
+<td align="left"></td>
+<td align="left">out of curiosity - who are the students? CS? Health Science?</td>
+<td align="left"><a href="https://twitter.com/dragonflystats/status/1333928718172098560" class="uri">https://twitter.com/dragonflystats/status/1333928718172098560</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333480918158254082" class="uri">https://twitter.com/tladeras/status/1333480918158254082</a></td>
+</tr>
+<tr class="even">
+<td align="left">02/12/2020 01:22:25</td>
+<td align="left">tladeras</td>
+<td align="left"></td>
+<td align="left">Biostatistics students.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333929477496205312" class="uri">https://twitter.com/tladeras/status/1333929477496205312</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333480918158254082" class="uri">https://twitter.com/tladeras/status/1333480918158254082</a></td>
+</tr>
+<tr class="odd">
+<td align="left">01/12/2020 19:15:14</td>
+<td align="left">eulerdiditfirst</td>
+<td align="left"></td>
+<td align="left">Writing your own tidy verse functions from chaining tidy verse functions using {{}} . Seriously feels like a super power sometimes</td>
+<td align="left"><a href="https://twitter.com/eulerdiditfirst/status/1333837073636274176" class="uri">https://twitter.com/eulerdiditfirst/status/1333837073636274176</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333480918158254082" class="uri">https://twitter.com/tladeras/status/1333480918158254082</a></td>
+</tr>
+<tr class="even">
+<td align="left">01/12/2020 18:34:13</td>
+<td align="left">pedro_tfonseca</td>
+<td align="left"></td>
+<td align="left">dplyr::near is one of my favorite</td>
+<td align="left"><a href="https://twitter.com/pedro_tfonseca/status/1333826750749487105" class="uri">https://twitter.com/pedro_tfonseca/status/1333826750749487105</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333480918158254082" class="uri">https://twitter.com/tladeras/status/1333480918158254082</a></td>
+</tr>
+<tr class="odd">
+<td align="left">01/12/2020 18:28:52</td>
+<td align="left">daniellequinn88</td>
+<td align="left">uncount()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333480918158254082" class="uri">https://twitter.com/tladeras/status/1333480918158254082</a></td>
+</tr>
+<tr class="even">
+<td align="left">01/12/2020 18:28:52</td>
+<td align="left">daniellequinn88</td>
+<td align="left">complete()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333480918158254082" class="uri">https://twitter.com/tladeras/status/1333480918158254082</a></td>
+</tr>
+<tr class="odd">
+<td align="left">01/12/2020 18:28:52</td>
+<td align="left">daniellequinn88</td>
+<td align="left">fill()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333480918158254082" class="uri">https://twitter.com/tladeras/status/1333480918158254082</a></td>
+</tr>
+<tr class="even">
+<td align="left">01/12/2020 18:28:52</td>
+<td align="left">daniellequinn88</td>
+<td align="left">replace_na()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333480918158254082" class="uri">https://twitter.com/tladeras/status/1333480918158254082</a></td>
+</tr>
+</tbody>
+</table>
 <p>At this point, I realized that I just needed to hand annotate the rest of the tweets, rather than wasting my time trying to parse the rest of the cases. So I pulled everything into Excel and just annotated the ones which I couldn’t pull from.</p>
 <div id="cleaned-tweets-and-threads" class="section level2">
 <h2>Cleaned Tweets and Threads</h2>
 <p>Here’s all of the tweets from this thread (naysayers included). They are in somewhat order (longer threads are grouped).</p>
 <p>Here’s a <a href="cleaned_tweets.csv">link to the cleaned CSV file</a></p>
-<pre class="r"><code>cleaned_tweets &lt;- read_csv(&quot;cleaned_tweets.csv&quot;) %&gt;% select(-parent_thread)
-
-out &lt;- DT::datatable(cleaned_tweets)
-
-widgetframe::frameWidget(out)</code></pre>
-<div id="htmlwidget-2" style="width:100%;height:480px;" class="widgetframe html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2">{"x":{"url":"index_files/figure-html//widgets/widget_unnamed-chunk-2.html","options":{"xdomain":"*","allowfullscreen":false,"lazyload":false}},"evals":[],"jsHooks":[]}</script>
+<pre class="r"><code>cleaned_tweets &lt;- read_csv(&quot;cleaned_tweets.csv&quot;) %&gt;% select(-parent_thread) 
+knitr::kable(cleaned_tweets)</code></pre>
+<table>
+<colgroup>
+<col width="4%" />
+<col width="3%" />
+<col width="5%" />
+<col width="69%" />
+<col width="15%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">date</th>
+<th align="left">user</th>
+<th align="left">funcs</th>
+<th align="left">text</th>
+<th align="left">reply</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2/12/2020 16:12</td>
+<td align="left">NathanKhadaroo</td>
+<td align="left">expand_grid()</td>
+<td align="left">tidyr::expand_grid() is really useful for creating new datasets to see how fitted models perform on new data!</td>
+<td align="left"><a href="https://twitter.com/NathanKhadaroo/status/1334153550486769665" class="uri">https://twitter.com/NathanKhadaroo/status/1334153550486769665</a></td>
+</tr>
+<tr class="even">
+<td align="left">2/12/2020 6:43</td>
+<td align="left">sleepydatum</td>
+<td align="left">anti_join()</td>
+<td align="left">dplyr::anti_join() is my personal favorite.</td>
+<td align="left"><a href="https://twitter.com/sleepydatum/status/1334010344704905216" class="uri">https://twitter.com/sleepydatum/status/1334010344704905216</a></td>
+</tr>
+<tr class="odd">
+<td align="left">2/12/2020 1:19</td>
+<td align="left">dragonflystats</td>
+<td align="left">NA</td>
+<td align="left">out of curiosity - who are the students? CS? Health Science?</td>
+<td align="left"><a href="https://twitter.com/dragonflystats/status/1333928718172098560" class="uri">https://twitter.com/dragonflystats/status/1333928718172098560</a></td>
+</tr>
+<tr class="even">
+<td align="left">2/12/2020 1:22</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Biostatistics students.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333929477496205312" class="uri">https://twitter.com/tladeras/status/1333929477496205312</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 19:15</td>
+<td align="left">eulerdiditfirst</td>
+<td align="left">NA</td>
+<td align="left">Writing your own tidy verse functions from chaining tidy verse functions using {{}} . Seriously feels like a super power sometimes</td>
+<td align="left"><a href="https://twitter.com/eulerdiditfirst/status/1333837073636274176" class="uri">https://twitter.com/eulerdiditfirst/status/1333837073636274176</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 18:34</td>
+<td align="left">pedro_tfonseca</td>
+<td align="left">near()</td>
+<td align="left">dplyr::near is one of my favorite</td>
+<td align="left"><a href="https://twitter.com/pedro_tfonseca/status/1333826750749487105" class="uri">https://twitter.com/pedro_tfonseca/status/1333826750749487105</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 18:28</td>
+<td align="left">daniellequinn88</td>
+<td align="left">uncount()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 18:28</td>
+<td align="left">daniellequinn88</td>
+<td align="left">complete()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 18:28</td>
+<td align="left">daniellequinn88</td>
+<td align="left">fill()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 18:28</td>
+<td align="left">daniellequinn88</td>
+<td align="left">replace_na()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 18:28</td>
+<td align="left">daniellequinn88</td>
+<td align="left">str_detect()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 18:28</td>
+<td align="left">daniellequinn88</td>
+<td align="left">str_which()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 18:28</td>
+<td align="left">daniellequinn88</td>
+<td align="left">ymd_hms()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 18:28</td>
+<td align="left">daniellequinn88</td>
+<td align="left">labs()</td>
+<td align="left">dplyr::uncount(); tidyr::complete(); tidyr::fill() / replace_na(); stringr::str_detect() / str_which(); lubridate::ymd_hms() and related functions; ggplot2::labs() - so simple, yet under appreciated!</td>
+<td align="left"><a href="https://twitter.com/daniellequinn88/status/1333825406739345410" class="uri">https://twitter.com/daniellequinn88/status/1333825406739345410</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 17:52</td>
+<td align="left">AmeliaMN</td>
+<td align="left">separate()</td>
+<td align="left">I donâ€™t know if itâ€™s less known or not, by tidyr::separate() is very useful</td>
+<td align="left"><a href="https://twitter.com/AmeliaMN/status/1333816354168741888" class="uri">https://twitter.com/AmeliaMN/status/1333816354168741888</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 18:04</td>
+<td align="left">tladeras</td>
+<td align="left">pivot_wider()</td>
+<td align="left">Yes! Very useful. I do think that {tidyr} in general is less known outside of pivot_wider() and pivot_longer().</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333819212633030661" class="uri">https://twitter.com/tladeras/status/1333819212633030661</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 18:04</td>
+<td align="left">tladeras</td>
+<td align="left">pivot_longer()</td>
+<td align="left">Yes! Very useful. I do think that {tidyr} in general is less known outside of pivot_wider() and pivot_longer().</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333819212633030661" class="uri">https://twitter.com/tladeras/status/1333819212633030661</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 18:32</td>
+<td align="left">ElinWaring</td>
+<td align="left">fct_infreq()</td>
+<td align="left">Forcats is also not as well known but has tons of handy functions like fct_infreq().</td>
+<td align="left"><a href="https://twitter.com/ElinWaring/status/1333826266223534080" class="uri">https://twitter.com/ElinWaring/status/1333826266223534080</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 17:43</td>
+<td align="left">rdh_CLE</td>
+<td align="left">dplyr::first()</td>
+<td align="left">Dplyr:: first and last</td>
+<td align="left"><a href="https://twitter.com/rdh_CLE/status/1333813865168199681" class="uri">https://twitter.com/rdh_CLE/status/1333813865168199681</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 17:43</td>
+<td align="left">rdh_CLE</td>
+<td align="left">dplyr::last()</td>
+<td align="left">Dplyr:: first and last</td>
+<td align="left"><a href="https://twitter.com/rdh_CLE/status/1333813865168199681" class="uri">https://twitter.com/rdh_CLE/status/1333813865168199681</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 16:38</td>
+<td align="left">IamBugsPotter</td>
+<td align="left">tabyl()</td>
+<td align="left">I know it’s not official but several times when starting out I would start collapsing things using dplyr before remembering I could just use janitor::tabyl()</td>
+<td align="left"><a href="https://twitter.com/IamBugsPotter/status/1333797530673442819" class="uri">https://twitter.com/IamBugsPotter/status/1333797530673442819</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 16:42</td>
+<td align="left">tladeras</td>
+<td align="left">tabyl()</td>
+<td align="left">tabyl() is the best, along with clean_names().</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333798671838711811" class="uri">https://twitter.com/tladeras/status/1333798671838711811</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 16:42</td>
+<td align="left">tladeras</td>
+<td align="left">janitor::clean_names()</td>
+<td align="left">tabyl() is the best, along with clean_names().</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333798671838711811" class="uri">https://twitter.com/tladeras/status/1333798671838711811</a></td>
+</tr>
+<tr class="even">
+<td align="left">2/12/2020 1:18</td>
+<td align="left">dragonflystats</td>
+<td align="left">{janitor}</td>
+<td align="left">i love Love LOVE Janitor</td>
+<td align="left"><a href="https://twitter.com/dragonflystats/status/1333928430426075136" class="uri">https://twitter.com/dragonflystats/status/1333928430426075136</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 16:29</td>
+<td align="left">aosmith16</td>
+<td align="left">n_distinct()</td>
+<td align="left">I try to squeeze in dplyr::n_distinct() to my basic intro. In my experience mostly useful for data checking/qaqc (i.e., becoming one with your dataset).</td>
+<td align="left"><a href="https://twitter.com/aosmith16/status/1333795320753389569" class="uri">https://twitter.com/aosmith16/status/1333795320753389569</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 16:43</td>
+<td align="left">tladeras</td>
+<td align="left">skim()</td>
+<td align="left">Yes! Super helpful. I currently use skimr to give students an overview, but that’s super helpful in giving single variable summaries.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333798968858349573" class="uri">https://twitter.com/tladeras/status/1333798968858349573</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 15:47</td>
+<td align="left">harlananelson</td>
+<td align="left">NA</td>
+<td align="left">Why would you want students who are just learning r to write about some obscure function?</td>
+<td align="left"><a href="https://twitter.com/harlananelson/status/1333784842392113160" class="uri">https://twitter.com/harlananelson/status/1333784842392113160</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 19:31</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">The point is for them to learn on their own and teach others. These aren’t obscure functions, they’re just lesser known ones. ; ; I can’t teach them everything, so the more I can teach the meta-learning, the better they will be off in the future.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333841177347379200" class="uri">https://twitter.com/tladeras/status/1333841177347379200</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 15:37</td>
+<td align="left">WireMonkey</td>
+<td align="left">{forcats}</td>
+<td align="left">I use forcats all the time. It’s especially helpful in ggplot when reordering an axis.</td>
+<td align="left"><a href="https://twitter.com/WireMonkey/status/1333782356495241217" class="uri">https://twitter.com/WireMonkey/status/1333782356495241217</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 16:44</td>
+<td align="left">tladeras</td>
+<td align="left">{forcats}</td>
+<td align="left">Definitely! {forcats} has so many useful functions.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333799178418360321" class="uri">https://twitter.com/tladeras/status/1333799178418360321</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 15:29</td>
+<td align="left">foppoli_luca</td>
+<td align="left">fill()</td>
+<td align="left">tidyr::fill() - extremely useful when creating a usable dataset out of a spreadsheet originally built for data entry, in which redundant informations are only reported once at the beginning of the group they refer to, rather than in every row as needed for the analysis.</td>
+<td align="left"><a href="https://twitter.com/foppoli_luca/status/1333780245896335360" class="uri">https://twitter.com/foppoli_luca/status/1333780245896335360</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 15:17</td>
+<td align="left">SorensenOystein</td>
+<td align="left">uncount()</td>
+<td align="left">tidyr::uncount(); tidyr::unnest(); dplyr::ntile()</td>
+<td align="left"><a href="https://twitter.com/SorensenOystein/status/1333777343119241216" class="uri">https://twitter.com/SorensenOystein/status/1333777343119241216</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 15:17</td>
+<td align="left">SorensenOystein</td>
+<td align="left">unnest()</td>
+<td align="left">tidyr::uncount(); tidyr::unnest(); dplyr::ntile()</td>
+<td align="left"><a href="https://twitter.com/SorensenOystein/status/1333777343119241216" class="uri">https://twitter.com/SorensenOystein/status/1333777343119241216</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 15:17</td>
+<td align="left">SorensenOystein</td>
+<td align="left">ntile()</td>
+<td align="left">tidyr::uncount(); tidyr::unnest(); dplyr::ntile()</td>
+<td align="left"><a href="https://twitter.com/SorensenOystein/status/1333777343119241216" class="uri">https://twitter.com/SorensenOystein/status/1333777343119241216</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:51</td>
+<td align="left">randyboyes</td>
+<td align="left">coalesce()</td>
+<td align="left">dplyr::coalesce() is so handy when you need it</td>
+<td align="left"><a href="https://twitter.com/randyboyes/status/1333770688818188288" class="uri">https://twitter.com/randyboyes/status/1333770688818188288</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:39</td>
+<td align="left">Airrock_TheRed</td>
+<td align="left">case_when()</td>
+<td align="left">I personally find case_when(), select(), slice(), and separate_rows() very helpful.</td>
+<td align="left"><a href="https://twitter.com/Airrock_TheRed/status/1333767571460468741" class="uri">https://twitter.com/Airrock_TheRed/status/1333767571460468741</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:39</td>
+<td align="left">Airrock_TheRed</td>
+<td align="left">select()</td>
+<td align="left">I personally find case_when(), select(), slice(), and separate_rows() very helpful.</td>
+<td align="left"><a href="https://twitter.com/Airrock_TheRed/status/1333767571460468741" class="uri">https://twitter.com/Airrock_TheRed/status/1333767571460468741</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:39</td>
+<td align="left">Airrock_TheRed</td>
+<td align="left">slice()</td>
+<td align="left">I personally find case_when(), select(), slice(), and separate_rows() very helpful.</td>
+<td align="left"><a href="https://twitter.com/Airrock_TheRed/status/1333767571460468741" class="uri">https://twitter.com/Airrock_TheRed/status/1333767571460468741</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:39</td>
+<td align="left">Airrock_TheRed</td>
+<td align="left">separate_rows()</td>
+<td align="left">I personally find case_when(), select(), slice(), and separate_rows() very helpful.</td>
+<td align="left"><a href="https://twitter.com/Airrock_TheRed/status/1333767571460468741" class="uri">https://twitter.com/Airrock_TheRed/status/1333767571460468741</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:28</td>
+<td align="left">TooSweetGeek</td>
+<td align="left">NA</td>
+<td align="left">unroll</td>
+<td align="left"><a href="https://twitter.com/TooSweetGeek/status/1333764835344052224" class="uri">https://twitter.com/TooSweetGeek/status/1333764835344052224</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:28</td>
+<td align="left">threadreaderapp</td>
+<td align="left">NA</td>
+<td align="left">Saluti, you can read it here: : Hi Everyone. I’m teaching an #rstats course next quarter. One assignment is to have each student write aboutâ€¦ <a href="https://t.co/PJH3wqv7aO" class="uri">https://t.co/PJH3wqv7aO</a> Share this if you think it’s interesting. ðŸ¤–</td>
+<td align="left"><a href="https://twitter.com/threadreaderapp/status/1333764855824871424" class="uri">https://twitter.com/threadreaderapp/status/1333764855824871424</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:23</td>
+<td align="left">rmkubinec</td>
+<td align="left">NA</td>
+<td align="left">Check out the dplyr window functions, cummin, cummax, cumany and cumall. They don’t seen useful at first but they can solve really tricky aggregation problems. <a href="https://t.co/aDpXqSB2Vx" class="uri">https://t.co/aDpXqSB2Vx</a></td>
+<td align="left"><a href="https://twitter.com/rmkubinec/status/1333763578428526593" class="uri">https://twitter.com/rmkubinec/status/1333763578428526593</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:12</td>
+<td align="left">InflationSquare</td>
+<td align="left">paste()</td>
+<td align="left">%<span class="math inline">\(% makes using paste() easier (among other things). ; I use %T&amp;gt;% View() at the end of %&amp;gt;% chains a lot as well.; dplyr::dense_rank() is another good one that I wouldn&#39;t have come across if I didn&#39;t know the SQL equivalent.; dplyr::group_[keys, rows, indices] are neat as well |https://twitter.com/InflationSquare/status/1333760840995049472 | |1/12/2020 14:12 |InflationSquare |View() |%\)</span>% makes using paste() easier (among other things). ; I use %T&gt;% View() at the end of %&gt;% chains a lot as well.; dplyr::dense_rank() is another good one that I wouldn’t have come across if I didn’t know the SQL equivalent.; dplyr::group_[keys, rows, indices] are neat as well</td>
+<td align="left"><a href="https://twitter.com/InflationSquare/status/1333760840995049472" class="uri">https://twitter.com/InflationSquare/status/1333760840995049472</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:12</td>
+<td align="left">InflationSquare</td>
+<td align="left">dense_rank()</td>
+<td align="left">%<span class="math inline">\(% makes using paste() easier (among other things). ; I use %T&amp;gt;% View() at the end of %&amp;gt;% chains a lot as well.; dplyr::dense_rank() is another good one that I wouldn&#39;t have come across if I didn&#39;t know the SQL equivalent.; dplyr::group_[keys, rows, indices] are neat as well |https://twitter.com/InflationSquare/status/1333760840995049472 | |1/12/2020 14:12 |InflationSquare |group_ |%\)</span>% makes using paste() easier (among other things). ; I use %T&gt;% View() at the end of %&gt;% chains a lot as well.; dplyr::dense_rank() is another good one that I wouldn’t have come across if I didn’t know the SQL equivalent.; dplyr::group_[keys, rows, indices] are neat as well</td>
+<td align="left"><a href="https://twitter.com/InflationSquare/status/1333760840995049472" class="uri">https://twitter.com/InflationSquare/status/1333760840995049472</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:10</td>
+<td align="left">PRLPoliSci</td>
+<td align="left">drop_na</td>
+<td align="left">A lot of great ones in the thread so far! I’d also toss in <code>drop_na</code></td>
+<td align="left"><a href="https://twitter.com/PRLPoliSci/status/1333760492221902850" class="uri">https://twitter.com/PRLPoliSci/status/1333760492221902850</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:09</td>
+<td align="left">stateofstats</td>
+<td align="left">pivot_wider()</td>
+<td align="left">pivot_wider() and pivot_longer(), formerly spread() and gather(). Incredibly useful in converting messy data into something useable</td>
+<td align="left"><a href="https://twitter.com/stateofstats/status/1333760011944783873" class="uri">https://twitter.com/stateofstats/status/1333760011944783873</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:09</td>
+<td align="left">stateofstats</td>
+<td align="left">pivot_longer()</td>
+<td align="left">pivot_wider() and pivot_longer(), formerly spread() and gather(). Incredibly useful in converting messy data into something useable</td>
+<td align="left"><a href="https://twitter.com/stateofstats/status/1333760011944783873" class="uri">https://twitter.com/stateofstats/status/1333760011944783873</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:09</td>
+<td align="left">stateofstats</td>
+<td align="left">spread()</td>
+<td align="left">pivot_wider() and pivot_longer(), formerly spread() and gather(). Incredibly useful in converting messy data into something useable</td>
+<td align="left"><a href="https://twitter.com/stateofstats/status/1333760011944783873" class="uri">https://twitter.com/stateofstats/status/1333760011944783873</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:09</td>
+<td align="left">stateofstats</td>
+<td align="left">gather()</td>
+<td align="left">pivot_wider() and pivot_longer(), formerly spread() and gather(). Incredibly useful in converting messy data into something useable</td>
+<td align="left"><a href="https://twitter.com/stateofstats/status/1333760011944783873" class="uri">https://twitter.com/stateofstats/status/1333760011944783873</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:04</td>
+<td align="left">Smith80D</td>
+<td align="left">fill()</td>
+<td align="left">tidyr::fill() is the one that I find especially useful, for all those imported Excel files with row headings that are merged. Always assumed it existed, but didn’t know its name until a colleague introduced us.</td>
+<td align="left"><a href="https://twitter.com/Smith80D/status/1333758936869027840" class="uri">https://twitter.com/Smith80D/status/1333758936869027840</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:03</td>
+<td align="left">wzzerd</td>
+<td align="left">case_when</td>
+<td align="left">When you don’t teach case_when, students will go years nesting ifelse like absolute chumps! Alternatively, to relabel discrete data I like to left_join with a crosswalk table so the associations are not hardcoded in the script.</td>
+<td align="left"><a href="https://twitter.com/wzzerd/status/1333758541090480131" class="uri">https://twitter.com/wzzerd/status/1333758541090480131</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:03</td>
+<td align="left">wzzerd</td>
+<td align="left">left_join</td>
+<td align="left">When you don’t teach case_when, students will go years nesting ifelse like absolute chumps! Alternatively, to relabel discrete data I like to left_join with a crosswalk table so the associations are not hardcoded in the script.</td>
+<td align="left"><a href="https://twitter.com/wzzerd/status/1333758541090480131" class="uri">https://twitter.com/wzzerd/status/1333758541090480131</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:02</td>
+<td align="left">Dorialexander</td>
+<td align="left">lead()</td>
+<td align="left">dplyr::lead and dplyr::lag Very practical especially within groups and yet they can be a bit tricky since it obviously raise NAs on first/last rows.</td>
+<td align="left"><a href="https://twitter.com/Dorialexander/status/1333758490456756224" class="uri">https://twitter.com/Dorialexander/status/1333758490456756224</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:02</td>
+<td align="left">Dorialexander</td>
+<td align="left">lead()</td>
+<td align="left">dplyr::lead and dplyr::lag Very practical especially within groups and yet they can be a bit tricky since it obviously raise NAs on first/last rows.</td>
+<td align="left"><a href="https://twitter.com/Dorialexander/status/1333758490456756224" class="uri">https://twitter.com/Dorialexander/status/1333758490456756224</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:01</td>
+<td align="left">LuisDVerde</td>
+<td align="left">enframe()</td>
+<td align="left">tibble::enframe()</td>
+<td align="left"><a href="https://twitter.com/LuisDVerde/status/1333758091482046465" class="uri">https://twitter.com/LuisDVerde/status/1333758091482046465</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 13:58</td>
+<td align="left">sebvanliempd</td>
+<td align="left">pivot_longer()</td>
+<td align="left">pivot_longer(); pivot_wider()</td>
+<td align="left"><a href="https://twitter.com/sebvanliempd/status/1333757370858606594" class="uri">https://twitter.com/sebvanliempd/status/1333757370858606594</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 13:58</td>
+<td align="left">sebvanliempd</td>
+<td align="left">pivot_wider()</td>
+<td align="left">pivot_longer(); pivot_wider()</td>
+<td align="left"><a href="https://twitter.com/sebvanliempd/status/1333757370858606594" class="uri">https://twitter.com/sebvanliempd/status/1333757370858606594</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 13:57</td>
+<td align="left">kjhealy</td>
+<td align="left">case_when()</td>
+<td align="left">case_when()</td>
+<td align="left"><a href="https://twitter.com/kjhealy/status/1333757100477050889" class="uri">https://twitter.com/kjhealy/status/1333757100477050889</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 13:51</td>
+<td align="left">Laserhedvig</td>
+<td align="left">distinct()</td>
+<td align="left">Oh man I use distinct() so much, especially with arrange() before and .keep_all = T</td>
+<td align="left"><a href="https://twitter.com/Laserhedvig/status/1333755705900281857" class="uri">https://twitter.com/Laserhedvig/status/1333755705900281857</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 13:51</td>
+<td align="left">Laserhedvig</td>
+<td align="left">arrange()</td>
+<td align="left">Oh man I use distinct() so much, especially with arrange() before and .keep_all = T</td>
+<td align="left"><a href="https://twitter.com/Laserhedvig/status/1333755705900281857" class="uri">https://twitter.com/Laserhedvig/status/1333755705900281857</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 13:51</td>
+<td align="left">Laserhedvig</td>
+<td align="left">keep_all</td>
+<td align="left">Oh man I use distinct() so much, especially with arrange() before and .keep_all = T</td>
+<td align="left"><a href="https://twitter.com/Laserhedvig/status/1333755705900281857" class="uri">https://twitter.com/Laserhedvig/status/1333755705900281857</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 10:28</td>
+<td align="left">ChloeFouilloux</td>
+<td align="left">()</td>
+<td align="left">tidyr:: gather () has saved me many a time when wrangling unruly data</td>
+<td align="left"><a href="https://twitter.com/ChloeFouilloux/status/1333704406446059520" class="uri">https://twitter.com/ChloeFouilloux/status/1333704406446059520</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 10:19</td>
+<td align="left">VizMonkey</td>
+<td align="left">add_count</td>
+<td align="left">I haven’t seen add_count but that’s a good one. Also keep and discard. And string_extract</td>
+<td align="left"><a href="https://twitter.com/VizMonkey/status/1333702366261092353" class="uri">https://twitter.com/VizMonkey/status/1333702366261092353</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 10:19</td>
+<td align="left">VizMonkey</td>
+<td align="left">string_extract</td>
+<td align="left">I haven’t seen add_count but that’s a good one. Also keep and discard. And string_extract</td>
+<td align="left"><a href="https://twitter.com/VizMonkey/status/1333702366261092353" class="uri">https://twitter.com/VizMonkey/status/1333702366261092353</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 9:59</td>
+<td align="left">MattAlhonte</td>
+<td align="left">separate()</td>
+<td align="left">separate is pretty awesome and something I covet from Python, so much so that I made a blog post about writing a hacky Pandas approximation! <a href="https://t.co/se5O4nR1sa" class="uri">https://t.co/se5O4nR1sa</a></td>
+<td align="left"><a href="https://twitter.com/MattAlhonte/status/1333697139382362112" class="uri">https://twitter.com/MattAlhonte/status/1333697139382362112</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 9:35</td>
+<td align="left">Stephenpedj</td>
+<td align="left">NA</td>
+<td align="left">- You should add this founder to your candid interview list!!</td>
+<td align="left"><a href="https://twitter.com/Stephenpedj/status/1333691231025577985" class="uri">https://twitter.com/Stephenpedj/status/1333691231025577985</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 8:04</td>
+<td align="left">Guy_F_Sutton</td>
+<td align="left">unite()</td>
+<td align="left">I find myself using tidyr::unite() a lot to clean messy data - particularly useful for making unique and informative ID’s for each row. coalesce() and fill() are also little known gems! :)</td>
+<td align="left"><a href="https://twitter.com/Guy_F_Sutton/status/1333668370668003329" class="uri">https://twitter.com/Guy_F_Sutton/status/1333668370668003329</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 8:04</td>
+<td align="left">Guy_F_Sutton</td>
+<td align="left">coalesce()</td>
+<td align="left">I find myself using tidyr::unite() a lot to clean messy data - particularly useful for making unique and informative ID’s for each row. coalesce() and fill() are also little known gems! :)</td>
+<td align="left"><a href="https://twitter.com/Guy_F_Sutton/status/1333668370668003329" class="uri">https://twitter.com/Guy_F_Sutton/status/1333668370668003329</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 8:04</td>
+<td align="left">Guy_F_Sutton</td>
+<td align="left">fill()</td>
+<td align="left">I find myself using tidyr::unite() a lot to clean messy data - particularly useful for making unique and informative ID’s for each row. coalesce() and fill() are also little known gems! :)</td>
+<td align="left"><a href="https://twitter.com/Guy_F_Sutton/status/1333668370668003329" class="uri">https://twitter.com/Guy_F_Sutton/status/1333668370668003329</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 7:25</td>
+<td align="left">ephorie</td>
+<td align="left">NA</td>
+<td align="left">Neither of them: <a href="https://t.co/Fbw9RHE3YF" class="uri">https://t.co/Fbw9RHE3YF</a></td>
+<td align="left"><a href="https://twitter.com/ephorie/status/1333658582592741376" class="uri">https://twitter.com/ephorie/status/1333658582592741376</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 7:22</td>
+<td align="left">Amit_Levinson</td>
+<td align="left">group_indices()</td>
+<td align="left">Found myself using group_indices() several times in the past weeks. Great for giving groups sequential ids.</td>
+<td align="left"><a href="https://twitter.com/Amit_Levinson/status/1333657608935387136" class="uri">https://twitter.com/Amit_Levinson/status/1333657608935387136</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 7:10</td>
+<td align="left">ReillyInnes</td>
+<td align="left">pivot_longer</td>
+<td align="left">tidyr::pivot_longer/wider; dplyr::n_distinct; tibble::glimpse; Are some of my most used (as well as %&gt;% )</td>
+<td align="left"><a href="https://twitter.com/ReillyInnes/status/1333654673694154753" class="uri">https://twitter.com/ReillyInnes/status/1333654673694154753</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 7:10</td>
+<td align="left">ReillyInnes</td>
+<td align="left">n_distinct</td>
+<td align="left">tidyr::pivot_longer/wider; dplyr::n_distinct; tibble::glimpse; Are some of my most used (as well as %&gt;% )</td>
+<td align="left"><a href="https://twitter.com/ReillyInnes/status/1333654673694154753" class="uri">https://twitter.com/ReillyInnes/status/1333654673694154753</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 7:00</td>
+<td align="left">bmwiernik</td>
+<td align="left">nest()</td>
+<td align="left">nest() / unnest()</td>
+<td align="left"><a href="https://twitter.com/bmwiernik/status/1333652161876602881" class="uri">https://twitter.com/bmwiernik/status/1333652161876602881</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 7:00</td>
+<td align="left">bmwiernik</td>
+<td align="left">unnest()</td>
+<td align="left">nest() / unnest()</td>
+<td align="left"><a href="https://twitter.com/bmwiernik/status/1333652161876602881" class="uri">https://twitter.com/bmwiernik/status/1333652161876602881</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 6:51</td>
+<td align="left">BenInquiring</td>
+<td align="left">map()</td>
+<td align="left">The map() family from {purrr} was a game changer for me. as_mapper() is a nifty little function, but might be a bit advanced.</td>
+<td align="left"><a href="https://twitter.com/BenInquiring/status/1333649884600143872" class="uri">https://twitter.com/BenInquiring/status/1333649884600143872</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 6:51</td>
+<td align="left">BenInquiring</td>
+<td align="left">as_mapper()</td>
+<td align="left">The map() family from {purrr} was a game changer for me. as_mapper() is a nifty little function, but might be a bit advanced.</td>
+<td align="left"><a href="https://twitter.com/BenInquiring/status/1333649884600143872" class="uri">https://twitter.com/BenInquiring/status/1333649884600143872</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 6:18</td>
+<td align="left">brodriguesco</td>
+<td align="left">NA</td>
+<td align="left">anything from {purrr}</td>
+<td align="left"><a href="https://twitter.com/brodriguesco/status/1333641723772362752" class="uri">https://twitter.com/brodriguesco/status/1333641723772362752</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 5:24</td>
+<td align="left">vishal_katti</td>
+<td align="left">case_when()</td>
+<td align="left">case_when() is one of my favourite #rstats dplyr functions. The formula-like syntax needs more explaining usually. This would be a good candidate for your assignment.</td>
+<td align="left"><a href="https://twitter.com/vishal_katti/status/1333627919927709698" class="uri">https://twitter.com/vishal_katti/status/1333627919927709698</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 5:37</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">We cover it in class. Itâ€™s way too useful to not cover it.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333631379611869185" class="uri">https://twitter.com/tladeras/status/1333631379611869185</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 5:20</td>
+<td align="left">EOTWorld28</td>
+<td align="left">{tidyeval}</td>
+<td align="left">One more thing that is beneficial to users would be Non Standard Evaluation(NSE); How to send columns name/ column names are strings to user functions.; ; I am yet to get my head around sym/syms ! :)</td>
+<td align="left"><a href="https://twitter.com/EOTWorld28/status/1333626930600415232" class="uri">https://twitter.com/EOTWorld28/status/1333626930600415232</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 5:22</td>
+<td align="left">tladeras</td>
+<td align="left">{tidyeval}</td>
+<td align="left">We may get to curly-curly {{ }}, but it will probably be after we work with {purrr}.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333627487465574400" class="uri">https://twitter.com/tladeras/status/1333627487465574400</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 4:46</td>
+<td align="left">Breza</td>
+<td align="left">partial()</td>
+<td align="left">partial() is so useful!</td>
+<td align="left"><a href="https://twitter.com/Breza/status/1333618564658589699" class="uri">https://twitter.com/Breza/status/1333618564658589699</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 5:18</td>
+<td align="left">tladeras</td>
+<td align="left">partial()</td>
+<td align="left">pryr::partial()?</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333626516580700162" class="uri">https://twitter.com/tladeras/status/1333626516580700162</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 4:40</td>
+<td align="left">dh_slone</td>
+<td align="left">tidy()</td>
+<td align="left">One more and then I’ll shut up ðŸ˜. sf is not part of the tidyverse, but it might as well be. Spatial file processing that is completely seamless with dplyr, ggplot, etc. I make all my maps with it these days.; And finally, the tidy() function from broom.</td>
+<td align="left"><a href="https://twitter.com/dh_slone/status/1333616997213605891" class="uri">https://twitter.com/dh_slone/status/1333616997213605891</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 4:42</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Yes, {sf} is fantastic! Makes complicated spatial queries and joins much easier.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333617473757671424" class="uri">https://twitter.com/tladeras/status/1333617473757671424</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 6:06</td>
+<td align="left">dh_slone</td>
+<td align="left">make_valid()</td>
+<td align="left">make_valid() is the sf magic wand that solves random polygon slivers that often exist in data.</td>
+<td align="left"><a href="https://twitter.com/dh_slone/status/1333638615746961408" class="uri">https://twitter.com/dh_slone/status/1333638615746961408</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 4:20</td>
+<td align="left">dh_slone</td>
+<td align="left">NA</td>
+<td align="left">Not tidyverse per se, but lots of these cover the ’verse:; <a href="https://t.co/lPLTvRO02z" class="uri">https://t.co/lPLTvRO02z</a>; I keep a binder of these on my desk.</td>
+<td align="left"><a href="https://twitter.com/dh_slone/status/1333611979978715137" class="uri">https://twitter.com/dh_slone/status/1333611979978715137</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 4:17</td>
+<td align="left">dh_slone</td>
+<td align="left">between()</td>
+<td align="left">I have not seen between() mentioned yet. Are you covering magrittr? %&lt;&gt;% ?</td>
+<td align="left"><a href="https://twitter.com/dh_slone/status/1333611038454009856" class="uri">https://twitter.com/dh_slone/status/1333611038454009856</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 4:26</td>
+<td align="left">tladeras</td>
+<td align="left">between()</td>
+<td align="left">We will cover {magrittr} - and yes between() can be very useful. ; ; I am a little leery of the assignment pipe, because it can cause mistakes due to overwriting the data frame.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333613517098815488" class="uri">https://twitter.com/tladeras/status/1333613517098815488</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 4:29</td>
+<td align="left">dh_slone</td>
+<td align="left">NA</td>
+<td align="left">I’ve never done that and had to start over from the beginning.</td>
+<td align="left"><a href="https://twitter.com/dh_slone/status/1333614169619386368" class="uri">https://twitter.com/dh_slone/status/1333614169619386368</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 4:06</td>
+<td align="left">EOTWorld28</td>
+<td align="left">group_walk()</td>
+<td align="left">I just learnt about the function â€œgroup_walkâ€; My requirement was to store my groups into separate csv files and group_walk() helps in just that in just single line of code!!; ; Still face palming myself to learn this so late !!ðŸ˜€</td>
+<td align="left"><a href="https://twitter.com/EOTWorld28/status/1333608379097493504" class="uri">https://twitter.com/EOTWorld28/status/1333608379097493504</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 4:27</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">That’s a nice one! Very cool.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333613706211516416" class="uri">https://twitter.com/tladeras/status/1333613706211516416</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 3:58</td>
+<td align="left">cote_energy</td>
+<td align="left">slice_max</td>
+<td align="left">slice_max, slice-min</td>
+<td align="left"><a href="https://twitter.com/cote_energy/status/1333606252828614659" class="uri">https://twitter.com/cote_energy/status/1333606252828614659</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 3:58</td>
+<td align="left">cote_energy</td>
+<td align="left">slice_min</td>
+<td align="left">slice_max, slice-min</td>
+<td align="left"><a href="https://twitter.com/cote_energy/status/1333606252828614659" class="uri">https://twitter.com/cote_energy/status/1333606252828614659</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 18:07</td>
+<td align="left">cote_energy</td>
+<td align="left">n_tile</td>
+<td align="left">Or n_tile!</td>
+<td align="left"><a href="https://twitter.com/cote_energy/status/1333820116732145667" class="uri">https://twitter.com/cote_energy/status/1333820116732145667</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 3:55</td>
+<td align="left">ellis_hughes</td>
+<td align="left">parse_</td>
+<td align="left">The readr parse_* functions. One of the listeners of #TidyX brought it up, and I’ve now used it so many places!!</td>
+<td align="left"><a href="https://twitter.com/ellis_hughes/status/1333605629596901377" class="uri">https://twitter.com/ellis_hughes/status/1333605629596901377</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 3:43</td>
+<td align="left">KellyBodwin</td>
+<td align="left">add_predictions()</td>
+<td align="left">I think broom::add_predictions() is criminally underrated.</td>
+<td align="left"><a href="https://twitter.com/KellyBodwin/status/1333602696234938368" class="uri">https://twitter.com/KellyBodwin/status/1333602696234938368</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 3:09</td>
+<td align="left">lisalendway</td>
+<td align="left">complete()</td>
+<td align="left">complete()</td>
+<td align="left"><a href="https://twitter.com/lisalendway/status/1333594125376032769" class="uri">https://twitter.com/lisalendway/status/1333594125376032769</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 3:14</td>
+<td align="left">tladeras</td>
+<td align="left">complete()</td>
+<td align="left">Good one! Always forget about complete()</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333595220781383680" class="uri">https://twitter.com/tladeras/status/1333595220781383680</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 3:12</td>
+<td align="left">alexcookson</td>
+<td align="left">NA</td>
+<td align="left">Just used this today! So handy!</td>
+<td align="left"><a href="https://twitter.com/alexcookson/status/1333594852995575816" class="uri">https://twitter.com/alexcookson/status/1333594852995575816</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 2:34</td>
+<td align="left">jeremy_data</td>
+<td align="left">first()</td>
+<td align="left">These were less known to me for a long time, but that may just be my own fault :) so, first() last() and nth() on grouped data that is arranged.</td>
+<td align="left"><a href="https://twitter.com/jeremy_data/status/1333585166388826113" class="uri">https://twitter.com/jeremy_data/status/1333585166388826113</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 2:34</td>
+<td align="left">jeremy_data</td>
+<td align="left">last()</td>
+<td align="left">These were less known to me for a long time, but that may just be my own fault :) so, first() last() and nth() on grouped data that is arranged.</td>
+<td align="left"><a href="https://twitter.com/jeremy_data/status/1333585166388826113" class="uri">https://twitter.com/jeremy_data/status/1333585166388826113</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 2:34</td>
+<td align="left">jeremy_data</td>
+<td align="left">nth()</td>
+<td align="left">These were less known to me for a long time, but that may just be my own fault :) so, first() last() and nth() on grouped data that is arranged.</td>
+<td align="left"><a href="https://twitter.com/jeremy_data/status/1333585166388826113" class="uri">https://twitter.com/jeremy_data/status/1333585166388826113</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 2:21</td>
+<td align="left">usansky</td>
+<td align="left">anti_join()</td>
+<td align="left">dplyr::anti_join(); dplyr::coalesce()</td>
+<td align="left"><a href="https://twitter.com/usansky/status/1333582033914916865" class="uri">https://twitter.com/usansky/status/1333582033914916865</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 2:21</td>
+<td align="left">usansky</td>
+<td align="left">coalesce()</td>
+<td align="left">dplyr::anti_join(); dplyr::coalesce()</td>
+<td align="left"><a href="https://twitter.com/usansky/status/1333582033914916865" class="uri">https://twitter.com/usansky/status/1333582033914916865</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 2:07</td>
+<td align="left">lopierra</td>
+<td align="left">mutate()</td>
+<td align="left">Not a function, but I recently discovered you can use .before and .after with mutate() to put the new column where you want it, rather than the default all the way at the end.</td>
+<td align="left"><a href="https://twitter.com/lopierra/status/1333578538683826176" class="uri">https://twitter.com/lopierra/status/1333578538683826176</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 1:47</td>
+<td align="left">wouldeye125</td>
+<td align="left">nest()</td>
+<td align="left">Honestly? nest() makes a lot of higher level stuff super easy</td>
+<td align="left"><a href="https://twitter.com/wouldeye125/status/1333573511386968064" class="uri">https://twitter.com/wouldeye125/status/1333573511386968064</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 2:07</td>
+<td align="left">tladeras</td>
+<td align="left">nest_by()</td>
+<td align="left">For sure. nest_by()/map() is probably one of the most powerful combos in the tidyverse.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333578509332070401" class="uri">https://twitter.com/tladeras/status/1333578509332070401</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 2:07</td>
+<td align="left">tladeras</td>
+<td align="left">map()</td>
+<td align="left">For sure. nest_by()/map() is probably one of the most powerful combos in the tidyverse.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333578509332070401" class="uri">https://twitter.com/tladeras/status/1333578509332070401</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 1:46</td>
+<td align="left">iamericfletcher</td>
+<td align="left">every()</td>
+<td align="left">every(), some(), and none() from {purrr}.</td>
+<td align="left"><a href="https://twitter.com/iamericfletcher/status/1333573236760731649" class="uri">https://twitter.com/iamericfletcher/status/1333573236760731649</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 1:46</td>
+<td align="left">iamericfletcher</td>
+<td align="left">some()</td>
+<td align="left">every(), some(), and none() from {purrr}.</td>
+<td align="left"><a href="https://twitter.com/iamericfletcher/status/1333573236760731649" class="uri">https://twitter.com/iamericfletcher/status/1333573236760731649</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 1:46</td>
+<td align="left">iamericfletcher</td>
+<td align="left">none()</td>
+<td align="left">every(), some(), and none() from {purrr}.</td>
+<td align="left"><a href="https://twitter.com/iamericfletcher/status/1333573236760731649" class="uri">https://twitter.com/iamericfletcher/status/1333573236760731649</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 1:06</td>
+<td align="left">PeeltothePithy</td>
+<td align="left">deframe()</td>
+<td align="left">tibble::deframe(), tibble::deframe(); coercing a two-column df to named vector, which I prefer immensely to names(df) &lt;- vec_of_names</td>
+<td align="left"><a href="https://twitter.com/PeeltothePithy/status/1333563043649900544" class="uri">https://twitter.com/PeeltothePithy/status/1333563043649900544</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 1:06</td>
+<td align="left">PeeltothePithy</td>
+<td align="left">vec_of_names</td>
+<td align="left">tibble::deframe(), tibble::deframe(); coercing a two-column df to named vector, which I prefer immensely to names(df) &lt;- vec_of_names</td>
+<td align="left"><a href="https://twitter.com/PeeltothePithy/status/1333563043649900544" class="uri">https://twitter.com/PeeltothePithy/status/1333563043649900544</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 1:27</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">This one is super helpful. I didn’t know about this one.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333568392528203776" class="uri">https://twitter.com/tladeras/status/1333568392528203776</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 1:32</td>
+<td align="left">grrrck</td>
+<td align="left">reduce()</td>
+<td align="left">Oh thatâ€™s cool! I often use purrr::reduce() for this and feel both clever and sorry for whoever reads my code next</td>
+<td align="left"><a href="https://twitter.com/grrrck/status/1333569666296520705" class="uri">https://twitter.com/grrrck/status/1333569666296520705</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 1:35</td>
+<td align="left">PeeltothePithy</td>
+<td align="left">left_join</td>
+<td align="left">There are some truly horrific reduce(left_join) statements hanging around in some old code of mine, and I apologize to my erstwhile colleagues.</td>
+<td align="left"><a href="https://twitter.com/PeeltothePithy/status/1333570489785217024" class="uri">https://twitter.com/PeeltothePithy/status/1333570489785217024</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 1:09</td>
+<td align="left">PeeltothePithy</td>
+<td align="left">vec_of_names</td>
+<td align="left">that should be names(vec) &lt;- vec_of_names but you get it</td>
+<td align="left"><a href="https://twitter.com/PeeltothePithy/status/1333563784204529666" class="uri">https://twitter.com/PeeltothePithy/status/1333563784204529666</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 1:09</td>
+<td align="left">PeeltothePithy</td>
+<td align="left">enframe()</td>
+<td align="left">also enframe(); ; DAMN YOU LACK OF EDIT</td>
+<td align="left"><a href="https://twitter.com/PeeltothePithy/status/1333563930464169987" class="uri">https://twitter.com/PeeltothePithy/status/1333563930464169987</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 0:42</td>
+<td align="left">CPumarFrohberg</td>
+<td align="left">fct_reorder()</td>
+<td align="left">forcats::fct_reorder()! Probably quite well-known, but its contribution to ordering levels in a visually intuitive way is not to be underestimated!</td>
+<td align="left"><a href="https://twitter.com/CPumarFrohberg/status/1333556954514542596" class="uri">https://twitter.com/CPumarFrohberg/status/1333556954514542596</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 0:36</td>
+<td align="left">Bouzoulay</td>
+<td align="left">map_dfr()</td>
+<td align="left">If it hasn’t been mentioned already, purrr::map_dfr() or dplyr::case_when()</td>
+<td align="left"><a href="https://twitter.com/Bouzoulay/status/1333555515155226627" class="uri">https://twitter.com/Bouzoulay/status/1333555515155226627</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 0:36</td>
+<td align="left">Bouzoulay</td>
+<td align="left">case_when()</td>
+<td align="left">If it hasn’t been mentioned already, purrr::map_dfr() or dplyr::case_when()</td>
+<td align="left"><a href="https://twitter.com/Bouzoulay/status/1333555515155226627" class="uri">https://twitter.com/Bouzoulay/status/1333555515155226627</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 0:15</td>
+<td align="left">tw0handt0uch1</td>
+<td align="left">crossing()</td>
+<td align="left">crossing() is pretty handy and str_glue() can be quite powerful</td>
+<td align="left"><a href="https://twitter.com/tw0handt0uch1/status/1333550171335008258" class="uri">https://twitter.com/tw0handt0uch1/status/1333550171335008258</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 0:15</td>
+<td align="left">tw0handt0uch1</td>
+<td align="left">str_glue()</td>
+<td align="left">crossing() is pretty handy and str_glue() can be quite powerful</td>
+<td align="left"><a href="https://twitter.com/tw0handt0uch1/status/1333550171335008258" class="uri">https://twitter.com/tw0handt0uch1/status/1333550171335008258</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 23:43:53</td>
+<td align="left">Luisfreii</td>
+<td align="left">str_trim()</td>
+<td align="left">stringr::str_trim() is pretty good</td>
+<td align="left"><a href="https://twitter.com/Luisfreii/status/1333542292846731271" class="uri">https://twitter.com/Luisfreii/status/1333542292846731271</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 23:15:32</td>
+<td align="left">ludictech</td>
+<td align="left">*_join()</td>
+<td align="left">The dplyr *_join()s and, well, all of stringr! str_wrap() can be pretty useful for wrapping eg plot titles to a certain length, str_match() or str_detect() are so useful…</td>
+<td align="left"><a href="https://twitter.com/ludictech/status/1333535157765156864" class="uri">https://twitter.com/ludictech/status/1333535157765156864</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 23:15:32</td>
+<td align="left">ludictech</td>
+<td align="left">str_wrap()</td>
+<td align="left">The dplyr *_join()s and, well, all of stringr! str_wrap() can be pretty useful for wrapping eg plot titles to a certain length, str_match() or str_detect() are so useful…</td>
+<td align="left"><a href="https://twitter.com/ludictech/status/1333535157765156864" class="uri">https://twitter.com/ludictech/status/1333535157765156864</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 23:15:32</td>
+<td align="left">ludictech</td>
+<td align="left">str_match()</td>
+<td align="left">The dplyr *_join()s and, well, all of stringr! str_wrap() can be pretty useful for wrapping eg plot titles to a certain length, str_match() or str_detect() are so useful…</td>
+<td align="left"><a href="https://twitter.com/ludictech/status/1333535157765156864" class="uri">https://twitter.com/ludictech/status/1333535157765156864</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 23:15:32</td>
+<td align="left">ludictech</td>
+<td align="left">str_detect()</td>
+<td align="left">The dplyr *_join()s and, well, all of stringr! str_wrap() can be pretty useful for wrapping eg plot titles to a certain length, str_match() or str_detect() are so useful…</td>
+<td align="left"><a href="https://twitter.com/ludictech/status/1333535157765156864" class="uri">https://twitter.com/ludictech/status/1333535157765156864</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 23:17:52</td>
+<td align="left">tladeras</td>
+<td align="left">str_wrap()</td>
+<td align="left">Oh yeah, str_wrap()! I had to use this for tooltips on a plotly plot recently.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333535746330742784" class="uri">https://twitter.com/tladeras/status/1333535746330742784</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 23:11:26</td>
+<td align="left">ludictech</td>
+<td align="left">read_csv()</td>
+<td align="left">readr::read_csv() &amp; write_csv() … (or read_delim() more generally) ?</td>
+<td align="left"><a href="https://twitter.com/ludictech/status/1333534126150971396" class="uri">https://twitter.com/ludictech/status/1333534126150971396</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 23:11:26</td>
+<td align="left">ludictech</td>
+<td align="left">write_csv()</td>
+<td align="left">readr::read_csv() &amp; write_csv() … (or read_delim() more generally) ?</td>
+<td align="left"><a href="https://twitter.com/ludictech/status/1333534126150971396" class="uri">https://twitter.com/ludictech/status/1333534126150971396</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 23:11:26</td>
+<td align="left">ludictech</td>
+<td align="left">read_delim()</td>
+<td align="left">readr::read_csv() &amp; write_csv() … (or read_delim() more generally) ?</td>
+<td align="left"><a href="https://twitter.com/ludictech/status/1333534126150971396" class="uri">https://twitter.com/ludictech/status/1333534126150971396</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 23:13:14</td>
+<td align="left">tladeras</td>
+<td align="left">{readr}</td>
+<td align="left">Certainly. We spend time with both {readr} and {readxl} because I think that loading data is the biggest point of frustration for students.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333534582495354880" class="uri">https://twitter.com/tladeras/status/1333534582495354880</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 3:42</td>
+<td align="left">apreshill</td>
+<td align="left">problems()</td>
+<td align="left">Ooh problems is a good function for importing rx <a href="https://t.co/P4ZR57PgOG" class="uri">https://t.co/P4ZR57PgOG</a></td>
+<td align="left"><a href="https://twitter.com/apreshill/status/1333602216318537728" class="uri">https://twitter.com/apreshill/status/1333602216318537728</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 3:48</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Ooooh. That looks great. Learning so much from this thread!</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333603834279522308" class="uri">https://twitter.com/tladeras/status/1333603834279522308</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 23:05:28</td>
+<td align="left">ArthurGailes</td>
+<td align="left">across()</td>
+<td align="left">Don’t know how well known or is because it’s new, but I never go a day without using across() anymore</td>
+<td align="left"><a href="https://twitter.com/ArthurGailes/status/1333532626536124416" class="uri">https://twitter.com/ArthurGailes/status/1333532626536124416</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 23:11:46</td>
+<td align="left">tladeras</td>
+<td align="left">across()</td>
+<td align="left">across() is super useful!</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333534213044244480" class="uri">https://twitter.com/tladeras/status/1333534213044244480</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 22:48:18</td>
+<td align="left">Trabendo_daze</td>
+<td align="left">case_when()</td>
+<td align="left">case_when() but that’s pretty well known</td>
+<td align="left"><a href="https://twitter.com/Trabendo_daze/status/1333528305321062400" class="uri">https://twitter.com/Trabendo_daze/status/1333528305321062400</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 23:23:31</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">There’s a reason it’s well known! Super Useful.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333537168375988224" class="uri">https://twitter.com/tladeras/status/1333537168375988224</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 22:32:24</td>
+<td align="left">JKubale</td>
+<td align="left">str_detect()</td>
+<td align="left">I don’t think str_detect(), case_when(), and zap_label() have been mentioned yet. Highly recommend.</td>
+<td align="left"><a href="https://twitter.com/JKubale/status/1333524304705716224" class="uri">https://twitter.com/JKubale/status/1333524304705716224</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 22:32:24</td>
+<td align="left">JKubale</td>
+<td align="left">case_when()</td>
+<td align="left">I don’t think str_detect(), case_when(), and zap_label() have been mentioned yet. Highly recommend.</td>
+<td align="left"><a href="https://twitter.com/JKubale/status/1333524304705716224" class="uri">https://twitter.com/JKubale/status/1333524304705716224</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 22:32:24</td>
+<td align="left">JKubale</td>
+<td align="left">zap_label()</td>
+<td align="left">I don’t think str_detect(), case_when(), and zap_label() have been mentioned yet. Highly recommend.</td>
+<td align="left"><a href="https://twitter.com/JKubale/status/1333524304705716224" class="uri">https://twitter.com/JKubale/status/1333524304705716224</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 22:43:02</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Nice! I am a little {haven} illiterate, so happy to include this.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333526981783158786" class="uri">https://twitter.com/tladeras/status/1333526981783158786</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:51:49</td>
+<td align="left">trentlikesstats</td>
+<td align="left">slice()</td>
+<td align="left">slice()</td>
+<td align="left"><a href="https://twitter.com/trentlikesstats/status/1333514089792827392" class="uri">https://twitter.com/trentlikesstats/status/1333514089792827392</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:45:07</td>
+<td align="left">cmdline_tips</td>
+<td align="left">unite()</td>
+<td align="left">like unite() and separate(). have a post based on ’s talk <a href="https://t.co/Qre4ACTRd6" class="uri">https://t.co/Qre4ACTRd6</a> #rstats</td>
+<td align="left"><a href="https://twitter.com/cmdline_tips/status/1333512404882350099" class="uri">https://twitter.com/cmdline_tips/status/1333512404882350099</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:45:07</td>
+<td align="left">cmdline_tips</td>
+<td align="left">separate()</td>
+<td align="left">like unite() and separate(). have a post based on ’s talk <a href="https://t.co/Qre4ACTRd6" class="uri">https://t.co/Qre4ACTRd6</a> #rstats</td>
+<td align="left"><a href="https://twitter.com/cmdline_tips/status/1333512404882350099" class="uri">https://twitter.com/cmdline_tips/status/1333512404882350099</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 22:08:15</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Nice! Thanks for putting this together.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333518227360546816" class="uri">https://twitter.com/tladeras/status/1333518227360546816</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 22:13:18</td>
+<td align="left">cmdline_tips</td>
+<td align="left">NA</td>
+<td align="left">the post was written immediately after ’s talk. I believe video of the talk is available now.</td>
+<td align="left"><a href="https://twitter.com/cmdline_tips/status/1333519497530138624" class="uri">https://twitter.com/cmdline_tips/status/1333519497530138624</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:38:32</td>
+<td align="left">robinson_es</td>
+<td align="left">NA</td>
+<td align="left">has a good talk <a href="https://t.co/s3LBiZ95tR" class="uri">https://t.co/s3LBiZ95tR</a></td>
+<td align="left"><a href="https://twitter.com/robinson_es/status/1333510746659987457" class="uri">https://twitter.com/robinson_es/status/1333510746659987457</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 23:04:46</td>
+<td align="left">jaredlander</td>
+<td align="left">NA</td>
+<td align="left">And herself has the lesser known stars talk <a href="https://t.co/80zdiWhIn4" class="uri">https://t.co/80zdiWhIn4</a></td>
+<td align="left"><a href="https://twitter.com/jaredlander/status/1333532449540857862" class="uri">https://twitter.com/jaredlander/status/1333532449540857862</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:41:40</td>
+<td align="left">ameresv</td>
+<td align="left">NA</td>
+<td align="left">One of the favorite. Also his screencast are the best. So much things to learn from it</td>
+<td align="left"><a href="https://twitter.com/ameresv/status/1333511537433194496" class="uri">https://twitter.com/ameresv/status/1333511537433194496</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:40:34</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Noice! Thanks, Emily.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333511260126625792" class="uri">https://twitter.com/tladeras/status/1333511260126625792</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:34:40</td>
+<td align="left">pj_ballantyne</td>
+<td align="left">mutate_at()</td>
+<td align="left">mutate_at() and mutate_if() ðŸ˜</td>
+<td align="left"><a href="https://twitter.com/pj_ballantyne/status/1333509774810492935" class="uri">https://twitter.com/pj_ballantyne/status/1333509774810492935</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:34:40</td>
+<td align="left">pj_ballantyne</td>
+<td align="left">mutate_if()</td>
+<td align="left">mutate_at() and mutate_if() ðŸ˜</td>
+<td align="left"><a href="https://twitter.com/pj_ballantyne/status/1333509774810492935" class="uri">https://twitter.com/pj_ballantyne/status/1333509774810492935</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:30:23</td>
+<td align="left">nathaneastwood_</td>
+<td align="left">with_groups()</td>
+<td align="left">There are plenty of lesser known experimental functions in dplyr 1.0.0 like with_groups(). Also some experimental features like .keep in mutate()</td>
+<td align="left"><a href="https://twitter.com/nathaneastwood_/status/1333508697385881601" class="uri">https://twitter.com/nathaneastwood_/status/1333508697385881601</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:30:23</td>
+<td align="left">nathaneastwood_</td>
+<td align="left">mutate()</td>
+<td align="left">There are plenty of lesser known experimental functions in dplyr 1.0.0 like with_groups(). Also some experimental features like .keep in mutate()</td>
+<td align="left"><a href="https://twitter.com/nathaneastwood_/status/1333508697385881601" class="uri">https://twitter.com/nathaneastwood_/status/1333508697385881601</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:28:13</td>
+<td align="left">MikeMahoney218</td>
+<td align="left">map_</td>
+<td align="left">purrr (and furrr) in general imo! I don’t know that map_* is more complicated than loops, but I think they’re underutilized. Also tidyr::nest and forcats::fct_reorder</td>
+<td align="left"><a href="https://twitter.com/MikeMahoney218/status/1333508151757463555" class="uri">https://twitter.com/MikeMahoney218/status/1333508151757463555</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:28:13</td>
+<td align="left">MikeMahoney218</td>
+<td align="left">fct_reorder</td>
+<td align="left">purrr (and furrr) in general imo! I don’t know that map_* is more complicated than loops, but I think they’re underutilized. Also tidyr::nest and forcats::fct_reorder</td>
+<td align="left"><a href="https://twitter.com/MikeMahoney218/status/1333508151757463555" class="uri">https://twitter.com/MikeMahoney218/status/1333508151757463555</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:35:57</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">We will get to {purrr} eventually. I’ve been trying to slowly distentangle the use case so one concept is learned at a time. It’s been tricky. ; ; <a href="https://t.co/A6r9jWtsCV" class="uri">https://t.co/A6r9jWtsCV</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333510099042615296" class="uri">https://twitter.com/tladeras/status/1333510099042615296</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:41:48</td>
+<td align="left">MikeMahoney218</td>
+<td align="left">safely()</td>
+<td align="left">TIL about <code>safely</code> ðŸ˜‚ I’ve mostly been writing package code recently &amp; am reluctant to include tidyverse dependencies, but boy oh boy do I have some horrifying <code>tryCatch</code> calls that could probably stand to be replaced…</td>
+<td align="left"><a href="https://twitter.com/MikeMahoney218/status/1333511572212371458" class="uri">https://twitter.com/MikeMahoney218/status/1333511572212371458</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:47:36</td>
+<td align="left">tladeras</td>
+<td align="left">safely()</td>
+<td align="left">Ha. safely()/possibly() can be super useful and I just learned about it by putting this section together…</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333513030005518338" class="uri">https://twitter.com/tladeras/status/1333513030005518338</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:47:36</td>
+<td align="left">tladeras</td>
+<td align="left">possibly()</td>
+<td align="left">Ha. safely()/possibly() can be super useful and I just learned about it by putting this section together…</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333513030005518338" class="uri">https://twitter.com/tladeras/status/1333513030005518338</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:28:03</td>
+<td align="left">allawayr</td>
+<td align="left">pluck()</td>
+<td align="left">I went for way too long not knowing about purrr::pluck()</td>
+<td align="left"><a href="https://twitter.com/allawayr/status/1333508111009673216" class="uri">https://twitter.com/allawayr/status/1333508111009673216</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:29:25</td>
+<td align="left">allawayr</td>
+<td align="left">case_when()</td>
+<td align="left">Oh oh and case_when() lets me be super lazy.</td>
+<td align="left"><a href="https://twitter.com/allawayr/status/1333508455491981314" class="uri">https://twitter.com/allawayr/status/1333508455491981314</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:19:36</td>
+<td align="left">ijeamaka_a</td>
+<td align="left">fct_relevel()</td>
+<td align="left">Forcats::fct_relevel() and forcats::fct_reorder()</td>
+<td align="left"><a href="https://twitter.com/ijeamaka_a/status/1333505984539414528" class="uri">https://twitter.com/ijeamaka_a/status/1333505984539414528</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:19:36</td>
+<td align="left">ijeamaka_a</td>
+<td align="left">fct_reorder()</td>
+<td align="left">Forcats::fct_relevel() and forcats::fct_reorder()</td>
+<td align="left"><a href="https://twitter.com/ijeamaka_a/status/1333505984539414528" class="uri">https://twitter.com/ijeamaka_a/status/1333505984539414528</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:19:32</td>
+<td align="left">piquergaming</td>
+<td align="left">hoist()</td>
+<td align="left">Hoist() - when youâ€™re dealing with JSON (or dynamodb in my case) itâ€™s a lifesaver.</td>
+<td align="left"><a href="https://twitter.com/piquergaming/status/1333505967728824325" class="uri">https://twitter.com/piquergaming/status/1333505967728824325</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:19:30</td>
+<td align="left">chrishanretty</td>
+<td align="left">if_else()</td>
+<td align="left">if_else (and an example of where you need to use it/where baseR ifelse breaks down)</td>
+<td align="left"><a href="https://twitter.com/chrishanretty/status/1333505958014832642" class="uri">https://twitter.com/chrishanretty/status/1333505958014832642</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:23:39</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Super useful!</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333507001263878144" class="uri">https://twitter.com/tladeras/status/1333507001263878144</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:18:48</td>
+<td align="left">maggiedalena123</td>
+<td align="left">anti_join()</td>
+<td align="left">anti_join()</td>
+<td align="left"><a href="https://twitter.com/maggiedalena123/status/1333505780557836288" class="uri">https://twitter.com/maggiedalena123/status/1333505780557836288</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:17:37</td>
+<td align="left">JJVenky</td>
+<td align="left">across()</td>
+<td align="left">mutate(across()) as in; ; data.frame(a=c(q,w,e), b=c(1,2,-1)) %&gt;% mutate(across(c(b), na_if, -1)); ; or; ; data.frame(a=c(q,w,e), b=c(1,2,-1)) %&gt;% mutate(across(c(b), ~replace(., .&lt;0,NA))</td>
+<td align="left"><a href="https://twitter.com/JJVenky/status/1333505485954310147" class="uri">https://twitter.com/JJVenky/status/1333505485954310147</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:17:37</td>
+<td align="left">JJVenky</td>
+<td align="left">na_if</td>
+<td align="left">mutate(across()) as in; ; data.frame(a=c(q,w,e), b=c(1,2,-1)) %&gt;% mutate(across(c(b), na_if, -1)); ; or; ; data.frame(a=c(q,w,e), b=c(1,2,-1)) %&gt;% mutate(across(c(b), ~replace(., .&lt;0,NA))</td>
+<td align="left"><a href="https://twitter.com/JJVenky/status/1333505485954310147" class="uri">https://twitter.com/JJVenky/status/1333505485954310147</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:28:10</td>
+<td align="left">tladeras</td>
+<td align="left">across()</td>
+<td align="left">Yup, mutate(across()) is great. I do cover {tidyselect} in my {tidyowl} tutorials: <a href="https://t.co/pRvC9YJZQG" class="uri">https://t.co/pRvC9YJZQG</a></td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333508141481267200" class="uri">https://twitter.com/tladeras/status/1333508141481267200</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:15:55</td>
+<td align="left">aecoppock</td>
+<td align="left">coalesce()</td>
+<td align="left">dplyr::coalesce()</td>
+<td align="left"><a href="https://twitter.com/aecoppock/status/1333505057233440770" class="uri">https://twitter.com/aecoppock/status/1333505057233440770</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:15:42</td>
+<td align="left">_echong</td>
+<td align="left">pull()</td>
+<td align="left">dplyr::pull(), to emphasize the difference between a vector and a one-column dataframe.</td>
+<td align="left"><a href="https://twitter.com/_echong/status/1333505001839325188" class="uri">https://twitter.com/_echong/status/1333505001839325188</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:20:04</td>
+<td align="left">tladeras</td>
+<td align="left">pull()</td>
+<td align="left">This is really one of the hardest concepts to teach, but agreed, pull() makes it much more clear.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333506100562329601" class="uri">https://twitter.com/tladeras/status/1333506100562329601</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:11:01</td>
+<td align="left">apreshill</td>
+<td align="left">breaks_pretty()</td>
+<td align="left">I think all of the scales package is helpful; ; <a href="https://t.co/s5WMZcWwYR" class="uri">https://t.co/s5WMZcWwYR</a>; ; I especially like breaks_pretty and the label functions: <a href="https://t.co/PtrVT2R7dM" class="uri">https://t.co/PtrVT2R7dM</a></td>
+<td align="left"><a href="https://twitter.com/apreshill/status/1333503821499293696" class="uri">https://twitter.com/apreshill/status/1333503821499293696</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:15:05</td>
+<td align="left">tladeras</td>
+<td align="left">breaks_pretty()</td>
+<td align="left">For sure. I usually don’t get to scales when I teach {ggplot2}, but I think it might be worth highlighting the useful cases like breaks_pretty().</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333504845500715009" class="uri">https://twitter.com/tladeras/status/1333504845500715009</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:20:12</td>
+<td align="left">apreshill</td>
+<td align="left">group_indices</td>
+<td align="left">Oh and one more! Sometimes dplyr::group_indices is helpful. The actual reference page is less helpful, but this discussion on the implementation is quite good: <a href="https://t.co/sD3iauuN9B" class="uri">https://t.co/sD3iauuN9B</a></td>
+<td align="left"><a href="https://twitter.com/apreshill/status/1333506135375159296" class="uri">https://twitter.com/apreshill/status/1333506135375159296</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:53:23</td>
+<td align="left">gvwilson</td>
+<td align="left">lag()</td>
+<td align="left">I am frequently surprised by how few people know about lag()</td>
+<td align="left"><a href="https://twitter.com/gvwilson/status/1333499385662070785" class="uri">https://twitter.com/gvwilson/status/1333499385662070785</a></td>
+</tr>
+<tr class="odd">
+<td align="left">2/12/2020 5:54</td>
+<td align="left">EvenKeely</td>
+<td align="left">lead()</td>
+<td align="left">lead() and lag() are awesome for working with transect point data.</td>
+<td align="left"><a href="https://twitter.com/EvenKeely/status/1333998054534504449" class="uri">https://twitter.com/EvenKeely/status/1333998054534504449</a></td>
+</tr>
+<tr class="even">
+<td align="left">2/12/2020 5:54</td>
+<td align="left">EvenKeely</td>
+<td align="left">lag()</td>
+<td align="left">lead() and lag() are awesome for working with transect point data.</td>
+<td align="left"><a href="https://twitter.com/EvenKeely/status/1333998054534504449" class="uri">https://twitter.com/EvenKeely/status/1333998054534504449</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:57:51</td>
+<td align="left">tladeras</td>
+<td align="left">lead()</td>
+<td align="left">Agreed. The documentation/examples are a little terse for lead()/lag(), which may be why few people use them.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333500509253115904" class="uri">https://twitter.com/tladeras/status/1333500509253115904</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:57:51</td>
+<td align="left">tladeras</td>
+<td align="left">lag()</td>
+<td align="left">Agreed. The documentation/examples are a little terse for lead()/lag(), which may be why few people use them.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333500509253115904" class="uri">https://twitter.com/tladeras/status/1333500509253115904</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:07:38</td>
+<td align="left">apreshill</td>
+<td align="left">NA</td>
+<td align="left">I think in general the window functions could use some love <a href="https://t.co/8z9DdvFQgt" class="uri">https://t.co/8z9DdvFQgt</a></td>
+<td align="left"><a href="https://twitter.com/apreshill/status/1333502970537922563" class="uri">https://twitter.com/apreshill/status/1333502970537922563</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:10:02</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Agreed! I think the window functions are really useful.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333503577789132800" class="uri">https://twitter.com/tladeras/status/1333503577789132800</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:49:45</td>
+<td align="left">kaiz_p</td>
+<td align="left">left_join()</td>
+<td align="left">left_join() and other joins, separate(), recode(), pivot_longer(), pivot_wider(), filter()</td>
+<td align="left"><a href="https://twitter.com/kaiz_p/status/1333498470842265600" class="uri">https://twitter.com/kaiz_p/status/1333498470842265600</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:49:45</td>
+<td align="left">kaiz_p</td>
+<td align="left">separate()</td>
+<td align="left">left_join() and other joins, separate(), recode(), pivot_longer(), pivot_wider(), filter()</td>
+<td align="left"><a href="https://twitter.com/kaiz_p/status/1333498470842265600" class="uri">https://twitter.com/kaiz_p/status/1333498470842265600</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:49:45</td>
+<td align="left">kaiz_p</td>
+<td align="left">recode()</td>
+<td align="left">left_join() and other joins, separate(), recode(), pivot_longer(), pivot_wider(), filter()</td>
+<td align="left"><a href="https://twitter.com/kaiz_p/status/1333498470842265600" class="uri">https://twitter.com/kaiz_p/status/1333498470842265600</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:49:45</td>
+<td align="left">kaiz_p</td>
+<td align="left">pivot_longer()</td>
+<td align="left">left_join() and other joins, separate(), recode(), pivot_longer(), pivot_wider(), filter()</td>
+<td align="left"><a href="https://twitter.com/kaiz_p/status/1333498470842265600" class="uri">https://twitter.com/kaiz_p/status/1333498470842265600</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:49:45</td>
+<td align="left">kaiz_p</td>
+<td align="left">pivot_wider()</td>
+<td align="left">left_join() and other joins, separate(), recode(), pivot_longer(), pivot_wider(), filter()</td>
+<td align="left"><a href="https://twitter.com/kaiz_p/status/1333498470842265600" class="uri">https://twitter.com/kaiz_p/status/1333498470842265600</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:49:45</td>
+<td align="left">kaiz_p</td>
+<td align="left">filter()</td>
+<td align="left">left_join() and other joins, separate(), recode(), pivot_longer(), pivot_wider(), filter()</td>
+<td align="left"><a href="https://twitter.com/kaiz_p/status/1333498470842265600" class="uri">https://twitter.com/kaiz_p/status/1333498470842265600</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:59:28</td>
+<td align="left">tladeras</td>
+<td align="left">recodeI()</td>
+<td align="left">All very useful! I sometimes do get confused over whether to teach recodeI() vs case_when() - they’re both useful, but the use cases are different.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333500916935245824" class="uri">https://twitter.com/tladeras/status/1333500916935245824</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:59:28</td>
+<td align="left">tladeras</td>
+<td align="left">case_when()</td>
+<td align="left">All very useful! I sometimes do get confused over whether to teach recodeI() vs case_when() - they’re both useful, but the use cases are different.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333500916935245824" class="uri">https://twitter.com/tladeras/status/1333500916935245824</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:08:24</td>
+<td align="left">kaiz_p</td>
+<td align="left">case_when()</td>
+<td align="left">Good point! ; I previously used case_when() for all my recoding needs, but then I discovered recode() and itâ€™s so much easier. Less code = fewer mistakes!</td>
+<td align="left"><a href="https://twitter.com/kaiz_p/status/1333503163417063424" class="uri">https://twitter.com/kaiz_p/status/1333503163417063424</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:08:24</td>
+<td align="left">kaiz_p</td>
+<td align="left">recode()</td>
+<td align="left">Good point! ; I previously used case_when() for all my recoding needs, but then I discovered recode() and itâ€™s so much easier. Less code = fewer mistakes!</td>
+<td align="left"><a href="https://twitter.com/kaiz_p/status/1333503163417063424" class="uri">https://twitter.com/kaiz_p/status/1333503163417063424</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:09:25</td>
+<td align="left">kaiz_p</td>
+<td align="left">case_when()</td>
+<td align="left">I now use case_when() mostly when Iâ€™m looking for a string – grepl() or when working across multiple columns – case_when(A == â€œaâ€ &amp; B == â€œbâ€ ~ â€œabâ€)</td>
+<td align="left"><a href="https://twitter.com/kaiz_p/status/1333503422117474306" class="uri">https://twitter.com/kaiz_p/status/1333503422117474306</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:09:25</td>
+<td align="left">kaiz_p</td>
+<td align="left">grepl()</td>
+<td align="left">I now use case_when() mostly when Iâ€™m looking for a string – grepl() or when working across multiple columns – case_when(A == â€œaâ€ &amp; B == â€œbâ€ ~ â€œabâ€)</td>
+<td align="left"><a href="https://twitter.com/kaiz_p/status/1333503422117474306" class="uri">https://twitter.com/kaiz_p/status/1333503422117474306</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:09:25</td>
+<td align="left">kaiz_p</td>
+<td align="left">case_when</td>
+<td align="left">I now use case_when() mostly when Iâ€™m looking for a string – grepl() or when working across multiple columns – case_when(A == â€œaâ€ &amp; B == â€œbâ€ ~ â€œabâ€)</td>
+<td align="left"><a href="https://twitter.com/kaiz_p/status/1333503422117474306" class="uri">https://twitter.com/kaiz_p/status/1333503422117474306</a></td>
+</tr>
+<tr class="even">
+<td align="left">2/12/2020 0:38</td>
+<td align="left">EvenKeely</td>
+<td align="left">NA</td>
+<td align="left">(TRUE ~ You missed one)</td>
+<td align="left"><a href="https://twitter.com/EvenKeely/status/1333918419440308224" class="uri">https://twitter.com/EvenKeely/status/1333918419440308224</a></td>
+</tr>
+<tr class="odd">
+<td align="left">2/12/2020 0:41</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">I feel seen.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333919182245642241" class="uri">https://twitter.com/tladeras/status/1333919182245642241</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:11:16</td>
+<td align="left">tladeras</td>
+<td align="left">case_when()</td>
+<td align="left">Very true. It can be hard to see which cases you missed when you write a case_when() statement, much like writing nested if() statements.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333503885512609793" class="uri">https://twitter.com/tladeras/status/1333503885512609793</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:11:16</td>
+<td align="left">tladeras</td>
+<td align="left">if()</td>
+<td align="left">Very true. It can be hard to see which cases you missed when you write a case_when() statement, much like writing nested if() statements.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333503885512609793" class="uri">https://twitter.com/tladeras/status/1333503885512609793</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:43:48</td>
+<td align="left">Corey_Yanofsky</td>
+<td align="left">replace_na</td>
+<td align="left">dplyr::arrange &amp; helper dplyr::desc; dplyr::coalesce; tidyr::replace_na; ; <a href="https://t.co/h9ew04PYcU" class="uri">https://t.co/h9ew04PYcU</a></td>
+<td align="left"><a href="https://twitter.com/Corey_Yanofsky/status/1333496974914498567" class="uri">https://twitter.com/Corey_Yanofsky/status/1333496974914498567</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:46:12</td>
+<td align="left">tladeras</td>
+<td align="left">coalesce()</td>
+<td align="left">Ha! ; ; And coalesce()/replace_na() are great. Adding them to the list.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333497578034397184" class="uri">https://twitter.com/tladeras/status/1333497578034397184</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:46:12</td>
+<td align="left">tladeras</td>
+<td align="left">replace_na()</td>
+<td align="left">Ha! ; ; And coalesce()/replace_na() are great. Adding them to the list.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333497578034397184" class="uri">https://twitter.com/tladeras/status/1333497578034397184</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:32:01</td>
+<td align="left">Recon1974</td>
+<td align="left">NA</td>
+<td align="left">do you teach tidyverse directly or base r first?</td>
+<td align="left"><a href="https://twitter.com/Recon1974/status/1333494008987987973" class="uri">https://twitter.com/Recon1974/status/1333494008987987973</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:34:58</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">I teach just enough base R for them to understand vectors, functions, and data.frames. ; ; You can see the previous class here: <a href="https://t.co/4WweuqMSl8" class="uri">https://t.co/4WweuqMSl8</a>; ; The rest is mostly tidyverse, except for the cases when they will encounter base-R a lot.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333494752860278784" class="uri">https://twitter.com/tladeras/status/1333494752860278784</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:40:42</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">I know this is probably controversial, but my goal is to get them up and working usefully as quickly as possible, rather than teach a standard programming course, which you have to learn a lot of things before you do something useful.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333496193091997696" class="uri">https://twitter.com/tladeras/status/1333496193091997696</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:30:29</td>
+<td align="left">BeltzEcology</td>
+<td align="left">floor_date()</td>
+<td align="left">lubridate::floor_date; ; I have recently become a HUGE fan!</td>
+<td align="left"><a href="https://twitter.com/BeltzEcology/status/1333493623468519424" class="uri">https://twitter.com/BeltzEcology/status/1333493623468519424</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 19:17</td>
+<td align="left">eulerdiditfirst</td>
+<td align="left">{tsibble}</td>
+<td align="left">Shout out to tsibble; if youâ€™re using times series data you should def check it out</td>
+<td align="left"><a href="https://twitter.com/eulerdiditfirst/status/1333837711552221192" class="uri">https://twitter.com/eulerdiditfirst/status/1333837711552221192</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 21:18:36</td>
+<td align="left">JenRichmondPhD</td>
+<td align="left">parse_date_time()</td>
+<td align="left">also lubridate::parse_date_time() is kinda magic</td>
+<td align="left"><a href="https://twitter.com/JenRichmondPhD/status/1333505733300604928" class="uri">https://twitter.com/JenRichmondPhD/status/1333505733300604928</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 21:49:37</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">It is <em>definitely</em> magic.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333513537692393473" class="uri">https://twitter.com/tladeras/status/1333513537692393473</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 4:12</td>
+<td align="left">dh_slone</td>
+<td align="left">ymd*()</td>
+<td align="left">most of lubridate is magical. I use the heck out of ymd…() and similar, with_tz() and force_tz() take care of my biggest headaches, floor_date(), and ceiling_date(), etc.</td>
+<td align="left"><a href="https://twitter.com/dh_slone/status/1333609783895728131" class="uri">https://twitter.com/dh_slone/status/1333609783895728131</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 4:12</td>
+<td align="left">dh_slone</td>
+<td align="left">with_tz()</td>
+<td align="left">most of lubridate is magical. I use the heck out of ymd…() and similar, with_tz() and force_tz() take care of my biggest headaches, floor_date(), and ceiling_date(), etc.</td>
+<td align="left"><a href="https://twitter.com/dh_slone/status/1333609783895728131" class="uri">https://twitter.com/dh_slone/status/1333609783895728131</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 4:12</td>
+<td align="left">dh_slone</td>
+<td align="left">force_tz()</td>
+<td align="left">most of lubridate is magical. I use the heck out of ymd…() and similar, with_tz() and force_tz() take care of my biggest headaches, floor_date(), and ceiling_date(), etc.</td>
+<td align="left"><a href="https://twitter.com/dh_slone/status/1333609783895728131" class="uri">https://twitter.com/dh_slone/status/1333609783895728131</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 4:12</td>
+<td align="left">dh_slone</td>
+<td align="left">floor_date()</td>
+<td align="left">most of lubridate is magical. I use the heck out of ymd…() and similar, with_tz() and force_tz() take care of my biggest headaches, floor_date(), and ceiling_date(), etc.</td>
+<td align="left"><a href="https://twitter.com/dh_slone/status/1333609783895728131" class="uri">https://twitter.com/dh_slone/status/1333609783895728131</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 4:12</td>
+<td align="left">dh_slone</td>
+<td align="left">ceiling_date()</td>
+<td align="left">most of lubridate is magical. I use the heck out of ymd…() and similar, with_tz() and force_tz() take care of my biggest headaches, floor_date(), and ceiling_date(), etc.</td>
+<td align="left"><a href="https://twitter.com/dh_slone/status/1333609783895728131" class="uri">https://twitter.com/dh_slone/status/1333609783895728131</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:35:21</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Ooh, this is great! Thanks!</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333494847282442241" class="uri">https://twitter.com/tladeras/status/1333494847282442241</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:37:36</td>
+<td align="left">BeltzEcology</td>
+<td align="left">NA</td>
+<td align="left">Welcome!</td>
+<td align="left"><a href="https://twitter.com/BeltzEcology/status/1333495413157064705" class="uri">https://twitter.com/BeltzEcology/status/1333495413157064705</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:15:42</td>
+<td align="left">emilmalta</td>
+<td align="left">uncount()</td>
+<td align="left">I use these all the time:; tidyr::uncount(); tidyr::separate and tidyr::separate_rows(); forcats::fct_inorder(); forcats::fct_infreq()</td>
+<td align="left"><a href="https://twitter.com/emilmalta/status/1333489903942955011" class="uri">https://twitter.com/emilmalta/status/1333489903942955011</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:15:42</td>
+<td align="left">emilmalta</td>
+<td align="left">separate_rows()</td>
+<td align="left">I use these all the time:; tidyr::uncount(); tidyr::separate and tidyr::separate_rows(); forcats::fct_inorder(); forcats::fct_infreq()</td>
+<td align="left"><a href="https://twitter.com/emilmalta/status/1333489903942955011" class="uri">https://twitter.com/emilmalta/status/1333489903942955011</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:15:42</td>
+<td align="left">emilmalta</td>
+<td align="left">fct_inorder()</td>
+<td align="left">I use these all the time:; tidyr::uncount(); tidyr::separate and tidyr::separate_rows(); forcats::fct_inorder(); forcats::fct_infreq()</td>
+<td align="left"><a href="https://twitter.com/emilmalta/status/1333489903942955011" class="uri">https://twitter.com/emilmalta/status/1333489903942955011</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:15:42</td>
+<td align="left">emilmalta</td>
+<td align="left">fct_infreq()</td>
+<td align="left">I use these all the time:; tidyr::uncount(); tidyr::separate and tidyr::separate_rows(); forcats::fct_inorder(); forcats::fct_infreq()</td>
+<td align="left"><a href="https://twitter.com/emilmalta/status/1333489903942955011" class="uri">https://twitter.com/emilmalta/status/1333489903942955011</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 23:49:22</td>
+<td align="left">samclifford</td>
+<td align="left">fct_explicit_na()</td>
+<td align="left">Been using forcats::fct_explicit_na() of late.</td>
+<td align="left"><a href="https://twitter.com/samclifford/status/1333543673330536449" class="uri">https://twitter.com/samclifford/status/1333543673330536449</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:17:34</td>
+<td align="left">tladeras</td>
+<td align="left">separate_rows()</td>
+<td align="left">Yes, we cover tidyr a little bit. These are great suggestions, especially separate_rows()</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333490373365141504" class="uri">https://twitter.com/tladeras/status/1333490373365141504</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:37:29</td>
+<td align="left">GenomeGal</td>
+<td align="left">separate_rows()</td>
+<td align="left">Yes! Separate_rows is my life - so useful!!</td>
+<td align="left"><a href="https://twitter.com/GenomeGal/status/1333495383121567744" class="uri">https://twitter.com/GenomeGal/status/1333495383121567744</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:21:21</td>
+<td align="left">emilmalta</td>
+<td align="left">uncount()</td>
+<td align="left">One thing that really made everything click for me, when learning tidy data, was that uncount() is in tidyr, and not dplyr.; ; Itâ€™s kinda subtle, but it was the thing that made me realize that tidying!=transforming.</td>
+<td align="left"><a href="https://twitter.com/emilmalta/status/1333491323513528324" class="uri">https://twitter.com/emilmalta/status/1333491323513528324</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:31:05</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Yes, this distinction escaped me at first. I guess it’s like the form versus content distinction.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333493773561602048" class="uri">https://twitter.com/tladeras/status/1333493773561602048</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:15:12</td>
+<td align="left">kaija_bean</td>
+<td align="left">pivot_longer()</td>
+<td align="left">pivot_longer() and pivot_wider() are great!</td>
+<td align="left"><a href="https://twitter.com/kaija_bean/status/1333489778734620672" class="uri">https://twitter.com/kaija_bean/status/1333489778734620672</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:15:12</td>
+<td align="left">kaija_bean</td>
+<td align="left">pivot_wider()</td>
+<td align="left">pivot_longer() and pivot_wider() are great!</td>
+<td align="left"><a href="https://twitter.com/kaija_bean/status/1333489778734620672" class="uri">https://twitter.com/kaija_bean/status/1333489778734620672</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:16:33</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">They are great!</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333490115440562176" class="uri">https://twitter.com/tladeras/status/1333490115440562176</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:15:41</td>
+<td align="left">kaija_bean</td>
+<td align="left">NA</td>
+<td align="left">And although they’re basically inverses of each other, each one had different arguments and different things to pay attention to, so I could easily see one student doing each of them without too much overlap.</td>
+<td align="left"><a href="https://twitter.com/kaija_bean/status/1333489900071563264" class="uri">https://twitter.com/kaija_bean/status/1333489900071563264</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:11:38</td>
+<td align="left">JayUlfelder</td>
+<td align="left">case_when()</td>
+<td align="left">A few that come to mind: dplyr::case_when(), purrr::map(), dplyr::group_map(), purrr::walk(), and purrr::pluck().</td>
+<td align="left"><a href="https://twitter.com/JayUlfelder/status/1333488879165468674" class="uri">https://twitter.com/JayUlfelder/status/1333488879165468674</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:11:38</td>
+<td align="left">JayUlfelder</td>
+<td align="left">map()</td>
+<td align="left">A few that come to mind: dplyr::case_when(), purrr::map(), dplyr::group_map(), purrr::walk(), and purrr::pluck().</td>
+<td align="left"><a href="https://twitter.com/JayUlfelder/status/1333488879165468674" class="uri">https://twitter.com/JayUlfelder/status/1333488879165468674</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:11:38</td>
+<td align="left">JayUlfelder</td>
+<td align="left">group_map()</td>
+<td align="left">A few that come to mind: dplyr::case_when(), purrr::map(), dplyr::group_map(), purrr::walk(), and purrr::pluck().</td>
+<td align="left"><a href="https://twitter.com/JayUlfelder/status/1333488879165468674" class="uri">https://twitter.com/JayUlfelder/status/1333488879165468674</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:11:38</td>
+<td align="left">JayUlfelder</td>
+<td align="left">walk()</td>
+<td align="left">A few that come to mind: dplyr::case_when(), purrr::map(), dplyr::group_map(), purrr::walk(), and purrr::pluck().</td>
+<td align="left"><a href="https://twitter.com/JayUlfelder/status/1333488879165468674" class="uri">https://twitter.com/JayUlfelder/status/1333488879165468674</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:11:38</td>
+<td align="left">JayUlfelder</td>
+<td align="left">pluck()</td>
+<td align="left">A few that come to mind: dplyr::case_when(), purrr::map(), dplyr::group_map(), purrr::walk(), and purrr::pluck().</td>
+<td align="left"><a href="https://twitter.com/JayUlfelder/status/1333488879165468674" class="uri">https://twitter.com/JayUlfelder/status/1333488879165468674</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:13:52</td>
+<td align="left">tladeras</td>
+<td align="left">case_when()</td>
+<td align="left">Yup, these are really useful! I do cover case_when() because it’s so universally useful. ; ; And I’m going to cover {purrr} a little bit. group_map() and walk() are great suggestions.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333489441357275136" class="uri">https://twitter.com/tladeras/status/1333489441357275136</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:13:52</td>
+<td align="left">tladeras</td>
+<td align="left">group_map()</td>
+<td align="left">Yup, these are really useful! I do cover case_when() because it’s so universally useful. ; ; And I’m going to cover {purrr} a little bit. group_map() and walk() are great suggestions.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333489441357275136" class="uri">https://twitter.com/tladeras/status/1333489441357275136</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:13:52</td>
+<td align="left">tladeras</td>
+<td align="left">walk()</td>
+<td align="left">Yup, these are really useful! I do cover case_when() because it’s so universally useful. ; ; And I’m going to cover {purrr} a little bit. group_map() and walk() are great suggestions.</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333489441357275136" class="uri">https://twitter.com/tladeras/status/1333489441357275136</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 20:06:04</td>
+<td align="left">ivelasq3</td>
+<td align="left">fill()</td>
+<td align="left">Is tidyr::fill() lesser known? [regardless I love it]; ; Sharing just in case you haven’t seen this! <a href="https://t.co/cpJfD56rxB" class="uri">https://t.co/cpJfD56rxB</a></td>
+<td align="left"><a href="https://twitter.com/ivelasq3/status/1333487477223526402" class="uri">https://twitter.com/ivelasq3/status/1333487477223526402</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 20:06:44</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Ooh! This is perfect. Thanks!</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333487645633040384" class="uri">https://twitter.com/tladeras/status/1333487645633040384</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 19:42:31</td>
+<td align="left">francisco_yira</td>
+<td align="left">cut_width</td>
+<td align="left">ggplot2::cut_width, cut_number and cut_interval to transform continuous variables into discrete bins</td>
+<td align="left"><a href="https://twitter.com/francisco_yira/status/1333481553209352194" class="uri">https://twitter.com/francisco_yira/status/1333481553209352194</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 19:42:31</td>
+<td align="left">francisco_yira</td>
+<td align="left">cut_number</td>
+<td align="left">ggplot2::cut_width, cut_number and cut_interval to transform continuous variables into discrete bins</td>
+<td align="left"><a href="https://twitter.com/francisco_yira/status/1333481553209352194" class="uri">https://twitter.com/francisco_yira/status/1333481553209352194</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 19:42:31</td>
+<td align="left">francisco_yira</td>
+<td align="left">cut_interval</td>
+<td align="left">ggplot2::cut_width, cut_number and cut_interval to transform continuous variables into discrete bins</td>
+<td align="left"><a href="https://twitter.com/francisco_yira/status/1333481553209352194" class="uri">https://twitter.com/francisco_yira/status/1333481553209352194</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 19:43:33</td>
+<td align="left">tladeras</td>
+<td align="left">NA</td>
+<td align="left">Ah, very interesting!</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333481813054873602" class="uri">https://twitter.com/tladeras/status/1333481813054873602</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 19:40:55</td>
+<td align="left">tladeras</td>
+<td align="left">relocate()</td>
+<td align="left">Here’s the list so far:; ; - dplyr::relocate(); - dplyr::count() / n(); - dplyr::distinct(); - dplyr::glimpse(); - dplyr::slice(); - ggplot2::geom_count()</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333481150505861122" class="uri">https://twitter.com/tladeras/status/1333481150505861122</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 19:40:55</td>
+<td align="left">tladeras</td>
+<td align="left">count()</td>
+<td align="left">Here’s the list so far:; ; - dplyr::relocate(); - dplyr::count() / n(); - dplyr::distinct(); - dplyr::glimpse(); - dplyr::slice(); - ggplot2::geom_count()</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333481150505861122" class="uri">https://twitter.com/tladeras/status/1333481150505861122</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 19:40:55</td>
+<td align="left">tladeras</td>
+<td align="left">n()</td>
+<td align="left">Here’s the list so far:; ; - dplyr::relocate(); - dplyr::count() / n(); - dplyr::distinct(); - dplyr::glimpse(); - dplyr::slice(); - ggplot2::geom_count()</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333481150505861122" class="uri">https://twitter.com/tladeras/status/1333481150505861122</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 19:40:55</td>
+<td align="left">tladeras</td>
+<td align="left">distinct()</td>
+<td align="left">Here’s the list so far:; ; - dplyr::relocate(); - dplyr::count() / n(); - dplyr::distinct(); - dplyr::glimpse(); - dplyr::slice(); - ggplot2::geom_count()</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333481150505861122" class="uri">https://twitter.com/tladeras/status/1333481150505861122</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 19:40:55</td>
+<td align="left">tladeras</td>
+<td align="left">glimpse()</td>
+<td align="left">Here’s the list so far:; ; - dplyr::relocate(); - dplyr::count() / n(); - dplyr::distinct(); - dplyr::glimpse(); - dplyr::slice(); - ggplot2::geom_count()</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333481150505861122" class="uri">https://twitter.com/tladeras/status/1333481150505861122</a></td>
+</tr>
+<tr class="odd">
+<td align="left">30/11/2020 19:40:55</td>
+<td align="left">tladeras</td>
+<td align="left">slice()</td>
+<td align="left">Here’s the list so far:; ; - dplyr::relocate(); - dplyr::count() / n(); - dplyr::distinct(); - dplyr::glimpse(); - dplyr::slice(); - ggplot2::geom_count()</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333481150505861122" class="uri">https://twitter.com/tladeras/status/1333481150505861122</a></td>
+</tr>
+<tr class="even">
+<td align="left">30/11/2020 19:40:55</td>
+<td align="left">tladeras</td>
+<td align="left">geom_count()</td>
+<td align="left">Here’s the list so far:; ; - dplyr::relocate(); - dplyr::count() / n(); - dplyr::distinct(); - dplyr::glimpse(); - dplyr::slice(); - ggplot2::geom_count()</td>
+<td align="left"><a href="https://twitter.com/tladeras/status/1333481150505861122" class="uri">https://twitter.com/tladeras/status/1333481150505861122</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 17:06</td>
+<td align="left">robbins_ave</td>
+<td align="left">add_count()</td>
+<td align="left">dplyr::add_count() is often useful</td>
+<td align="left"><a href="https://twitter.com/robbins_ave/status/1333804635090419718" class="uri">https://twitter.com/robbins_ave/status/1333804635090419718</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:23</td>
+<td align="left">delaBJL</td>
+<td align="left">stat_summary</td>
+<td align="left">ggplot2::stat_summary is fun; ; I use a lot of the stringr functions, str_remove(), str_detect(); ; pivot_longer() and pivot_wider() are fairly simple to grok and are incredibly useful</td>
+<td align="left"><a href="https://twitter.com/delaBJL/status/1333763565732376577" class="uri">https://twitter.com/delaBJL/status/1333763565732376577</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:23</td>
+<td align="left">delaBJL</td>
+<td align="left">str_remove()</td>
+<td align="left">ggplot2::stat_summary is fun; ; I use a lot of the stringr functions, str_remove(), str_detect(); ; pivot_longer() and pivot_wider() are fairly simple to grok and are incredibly useful</td>
+<td align="left"><a href="https://twitter.com/delaBJL/status/1333763565732376577" class="uri">https://twitter.com/delaBJL/status/1333763565732376577</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:23</td>
+<td align="left">delaBJL</td>
+<td align="left">str_detect()</td>
+<td align="left">ggplot2::stat_summary is fun; ; I use a lot of the stringr functions, str_remove(), str_detect(); ; pivot_longer() and pivot_wider() are fairly simple to grok and are incredibly useful</td>
+<td align="left"><a href="https://twitter.com/delaBJL/status/1333763565732376577" class="uri">https://twitter.com/delaBJL/status/1333763565732376577</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 14:23</td>
+<td align="left">delaBJL</td>
+<td align="left">pivot_longer()</td>
+<td align="left">ggplot2::stat_summary is fun; ; I use a lot of the stringr functions, str_remove(), str_detect(); ; pivot_longer() and pivot_wider() are fairly simple to grok and are incredibly useful</td>
+<td align="left"><a href="https://twitter.com/delaBJL/status/1333763565732376577" class="uri">https://twitter.com/delaBJL/status/1333763565732376577</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 14:23</td>
+<td align="left">delaBJL</td>
+<td align="left">pivot_wider()</td>
+<td align="left">ggplot2::stat_summary is fun; ; I use a lot of the stringr functions, str_remove(), str_detect(); ; pivot_longer() and pivot_wider() are fairly simple to grok and are incredibly useful</td>
+<td align="left"><a href="https://twitter.com/delaBJL/status/1333763565732376577" class="uri">https://twitter.com/delaBJL/status/1333763565732376577</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 15:37</td>
+<td align="left">toeb18</td>
+<td align="left">str_wrap</td>
+<td align="left">str_wrap is also a fantastic one</td>
+<td align="left"><a href="https://twitter.com/toeb18/status/1333782355174154241" class="uri">https://twitter.com/toeb18/status/1333782355174154241</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 13:59</td>
+<td align="left">GMFranceschini</td>
+<td align="left">case_when()</td>
+<td align="left">case_when(), group_by()/summarise()</td>
+<td align="left"><a href="https://twitter.com/GMFranceschini/status/1333757584432656386" class="uri">https://twitter.com/GMFranceschini/status/1333757584432656386</a></td>
+</tr>
+<tr class="odd">
+<td align="left">1/12/2020 13:59</td>
+<td align="left">GMFranceschini</td>
+<td align="left">group_by()</td>
+<td align="left">case_when(), group_by()/summarise()</td>
+<td align="left"><a href="https://twitter.com/GMFranceschini/status/1333757584432656386" class="uri">https://twitter.com/GMFranceschini/status/1333757584432656386</a></td>
+</tr>
+<tr class="even">
+<td align="left">1/12/2020 13:59</td>
+<td align="left">GMFranceschini</td>
+<td align="left">summarise()</td>
+<td align="left">case_when(), group_by()/summarise()</td>
+<td align="left"><a href="https://twitter.com/GMFranceschini/status/1333757584432656386" class="uri">https://twitter.com/GMFranceschini/status/1333757584432656386</a></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div id="top-20-function-suggestions" class="section level2">
 <h2>Top 20 function suggestions</h2>
@@ -90,7 +2063,7 @@ widgetframe::frameWidget(out)</code></pre>
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#lbowwtugqd .gt_table {
+#akkfxzivux .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -115,7 +2088,7 @@ widgetframe::frameWidget(out)</code></pre>
   border-left-color: #D3D3D3;
 }
 
-#lbowwtugqd .gt_heading {
+#akkfxzivux .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -127,7 +2100,7 @@ widgetframe::frameWidget(out)</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#lbowwtugqd .gt_title {
+#akkfxzivux .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -137,7 +2110,7 @@ widgetframe::frameWidget(out)</code></pre>
   border-bottom-width: 0;
 }
 
-#lbowwtugqd .gt_subtitle {
+#akkfxzivux .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -147,13 +2120,13 @@ widgetframe::frameWidget(out)</code></pre>
   border-top-width: 0;
 }
 
-#lbowwtugqd .gt_bottom_border {
+#akkfxzivux .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#lbowwtugqd .gt_col_headings {
+#akkfxzivux .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -168,7 +2141,7 @@ widgetframe::frameWidget(out)</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#lbowwtugqd .gt_col_heading {
+#akkfxzivux .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -188,7 +2161,7 @@ widgetframe::frameWidget(out)</code></pre>
   overflow-x: hidden;
 }
 
-#lbowwtugqd .gt_column_spanner_outer {
+#akkfxzivux .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -200,15 +2173,15 @@ widgetframe::frameWidget(out)</code></pre>
   padding-right: 4px;
 }
 
-#lbowwtugqd .gt_column_spanner_outer:first-child {
+#akkfxzivux .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#lbowwtugqd .gt_column_spanner_outer:last-child {
+#akkfxzivux .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#lbowwtugqd .gt_column_spanner {
+#akkfxzivux .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -220,7 +2193,7 @@ widgetframe::frameWidget(out)</code></pre>
   width: 100%;
 }
 
-#lbowwtugqd .gt_group_heading {
+#akkfxzivux .gt_group_heading {
   padding: 8px;
   color: #333333;
   background-color: #FFFFFF;
@@ -242,7 +2215,7 @@ widgetframe::frameWidget(out)</code></pre>
   vertical-align: middle;
 }
 
-#lbowwtugqd .gt_empty_group_heading {
+#akkfxzivux .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -257,15 +2230,15 @@ widgetframe::frameWidget(out)</code></pre>
   vertical-align: middle;
 }
 
-#lbowwtugqd .gt_from_md > :first-child {
+#akkfxzivux .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#lbowwtugqd .gt_from_md > :last-child {
+#akkfxzivux .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#lbowwtugqd .gt_row {
+#akkfxzivux .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -284,7 +2257,7 @@ widgetframe::frameWidget(out)</code></pre>
   overflow-x: hidden;
 }
 
-#lbowwtugqd .gt_stub {
+#akkfxzivux .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -296,7 +2269,7 @@ widgetframe::frameWidget(out)</code></pre>
   padding-left: 12px;
 }
 
-#lbowwtugqd .gt_summary_row {
+#akkfxzivux .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -306,7 +2279,7 @@ widgetframe::frameWidget(out)</code></pre>
   padding-right: 5px;
 }
 
-#lbowwtugqd .gt_first_summary_row {
+#akkfxzivux .gt_first_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -316,7 +2289,7 @@ widgetframe::frameWidget(out)</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#lbowwtugqd .gt_grand_summary_row {
+#akkfxzivux .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -326,7 +2299,7 @@ widgetframe::frameWidget(out)</code></pre>
   padding-right: 5px;
 }
 
-#lbowwtugqd .gt_first_grand_summary_row {
+#akkfxzivux .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -336,11 +2309,11 @@ widgetframe::frameWidget(out)</code></pre>
   border-top-color: #D3D3D3;
 }
 
-#lbowwtugqd .gt_striped {
+#akkfxzivux .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#lbowwtugqd .gt_table_body {
+#akkfxzivux .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -349,7 +2322,7 @@ widgetframe::frameWidget(out)</code></pre>
   border-bottom-color: #D3D3D3;
 }
 
-#lbowwtugqd .gt_footnotes {
+#akkfxzivux .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -363,13 +2336,13 @@ widgetframe::frameWidget(out)</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#lbowwtugqd .gt_footnote {
+#akkfxzivux .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding: 4px;
 }
 
-#lbowwtugqd .gt_sourcenotes {
+#akkfxzivux .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -383,46 +2356,46 @@ widgetframe::frameWidget(out)</code></pre>
   border-right-color: #D3D3D3;
 }
 
-#lbowwtugqd .gt_sourcenote {
+#akkfxzivux .gt_sourcenote {
   font-size: 90%;
   padding: 4px;
 }
 
-#lbowwtugqd .gt_left {
+#akkfxzivux .gt_left {
   text-align: left;
 }
 
-#lbowwtugqd .gt_center {
+#akkfxzivux .gt_center {
   text-align: center;
 }
 
-#lbowwtugqd .gt_right {
+#akkfxzivux .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#lbowwtugqd .gt_font_normal {
+#akkfxzivux .gt_font_normal {
   font-weight: normal;
 }
 
-#lbowwtugqd .gt_font_bold {
+#akkfxzivux .gt_font_bold {
   font-weight: bold;
 }
 
-#lbowwtugqd .gt_font_italic {
+#akkfxzivux .gt_font_italic {
   font-style: italic;
 }
 
-#lbowwtugqd .gt_super {
+#akkfxzivux .gt_super {
   font-size: 65%;
 }
 
-#lbowwtugqd .gt_footnote_marks {
+#akkfxzivux .gt_footnote_marks {
   font-style: italic;
   font-size: 65%;
 }
 </style>
-<div id="lbowwtugqd" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
+<div id="akkfxzivux" style="overflow-x:auto;overflow-y:auto;width:auto;height:auto;"><table class="gt_table">
   
   <thead class="gt_col_headings">
     <tr>
