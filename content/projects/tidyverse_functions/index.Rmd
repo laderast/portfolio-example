@@ -2,7 +2,10 @@
 title: "Underrated Tidyverse Functions"
 author: "Ted Laderas"
 date: "12/1/2020"
-output: html_document
+output: 
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
@@ -14,24 +17,50 @@ DT::datatable(tweets)
 
 # The Assignment
 
-I'm teaching an R Programming course next term. Jessica Minnier and I are developing the [Ready for R Materials](https://ready4r.netlify.app/labbook) into a longer, more involved course.
+I'm teaching an R Programming course next term. Jessica Minnier and I are developing the [Ready for R Materials](https://ready4r.netlify.app/labbook) into a longer and more involved course.
 
-I think one of the most important things is to teach people how to self-learn. So that's the motivation behind the *Tidyverse function of the Week* assignment. 
+I think one of the most important things is to teach people how to self-learn. As learning to program is a lifelong learning activity, it's critically important to give them these meta-learning skills.  So that's the motivation behind the *Tidyverse function of the Week* assignment. 
 
 I asked on Twitter:
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Hi Everyone. I&#39;m teaching an <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a> course next quarter. <br><br>One assignment is to have each student write about a <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a> function. What it&#39;s for and an example.<br><br>What are some less known <a href="https://twitter.com/hashtag/tidyverse?src=hash&amp;ref_src=twsrc%5Etfw">#tidyverse</a> functions that do a job you find useful?</p>&mdash; Ted Laderas, PhD 🏳️‍🌈 (@tladeras) <a href="https://twitter.com/tladeras/status/1333480918158254082?ref_src=twsrc%5Etfw">November 30, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+## Some of my favorite suggestions
 
-## Wow!
+Here are some of the highlights from the thread.
+
+I loved all of these. Danielle Quinn wins the MVP award for naming so many useful functions:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">dplyr::uncount()<br>tidyr::complete()<br>tidyr::fill() / replace_na()<br>stringr::str_detect() / str_which()<br>lubridate::ymd_hms() and related functions<br>ggplot2::labs() - so simple, yet under appreciated!</p>&mdash; Danielle Quinn (she/her) (@daniellequinn88) <a href="https://twitter.com/daniellequinn88/status/1333825406739345410?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+`fill()` was highly suggested:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">tidyr::fill() - extremely useful when creating a usable dataset out of a spreadsheet originally built for data entry, in which redundant informations are only reported once at the beginning of the group they refer to, rather than in every row as needed for the analysis.</p>&mdash; Luca Foppoli (@foppoli_luca) <a href="https://twitter.com/foppoli_luca/status/1333780245896335360?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Many people suggested the window functions, including `lead()` and `lag()` and the cumulative functions:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Check out the dplyr window functions, cummin, cummax, cumany and cumall. They don&#39;t seen useful at first but they can solve really tricky aggregation problems. <a href="https://t.co/aDpXqSB2Vx">https://t.co/aDpXqSB2Vx</a></p>&mdash; Robert Kubinec (@rmkubinec) <a href="https://twitter.com/rmkubinec/status/1333763578428526593?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+Alison Hill suggested `problems()`, which helps you diagnose why your data isn't loading:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ooh problems is a good function for importing rx <a href="https://t.co/P4ZR57PgOG">https://t.co/P4ZR57PgOG</a></p>&mdash; Alison Presmanes Hill (@apreshill) <a href="https://twitter.com/apreshill/status/1333602216318537728?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+I think that `deframe()` and `enframe()` are really exciting, since I do this operation all the time:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">tibble::deframe(), tibble::deframe()<br>coercing a two-column df to named vector, which I prefer immensely to names(df) &lt;- vec_of_names</p>&mdash; E. David Aja (@PeeltothePithy) <a href="https://twitter.com/PeeltothePithy/status/1333563043649900544?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+`unite()`, `separate()` and `separate_rows()` also had their own contingent: 
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I find myself using tidyr::unite() a lot to clean messy data - particularly useful for making unique and informative ID&#39;s for each row. coalesce() and fill() are also little known gems! :)</p>&mdash; Guy Sutton🐝🌾🇿🇦🇿🇼 (@Guy_F_Sutton) <a href="https://twitter.com/Guy_F_Sutton/status/1333668370668003329?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+## Wow! Let's Grab All the Tweets and Replies
 
 I was bowled over by all of the replies. This was an unexpectedly really fun thread, and lots of recommendations from others. 
 
 I thought I would try and summarize everyone's suggestions and compile a list of recommended functions. I used [this script](https://github.com/gmellini/twitter-scraper) with some modifications to pull all the replies to my tweet. In particular, I had to request for `extended` tweet mode, and I extracted a few more fields from the returned JSON.
 
 This wrote the tweet information into a CSV file.
-
-
 
 Then I started parsing the data. I wrote a couple of functions, `remove_users_from_text()` and `get_funcs()` to try and clean the data a bit, and used a relatively simple regular expression to try to return the function.
 
@@ -76,34 +105,6 @@ cleaned_tweets <- read_csv("cleaned_tweets.csv") %>% select(-parent_thread) %>%
 knitr::kable(cleaned_tweets)
 ```
 
-
-## Some of my favorite suggestions
-
-Here are some of my highlights from the thread.
-
-I loved all of these. Danielle Quinn wins the MVP award for naming so many useful functions:
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">dplyr::uncount()<br>tidyr::complete()<br>tidyr::fill() / replace_na()<br>stringr::str_detect() / str_which()<br>lubridate::ymd_hms() and related functions<br>ggplot2::labs() - so simple, yet under appreciated!</p>&mdash; Danielle Quinn (she/her) (@daniellequinn88) <a href="https://twitter.com/daniellequinn88/status/1333825406739345410?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-`fill()` was highly suggested:
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">tidyr::fill() - extremely useful when creating a usable dataset out of a spreadsheet originally built for data entry, in which redundant informations are only reported once at the beginning of the group they refer to, rather than in every row as needed for the analysis.</p>&mdash; Luca Foppoli (@foppoli_luca) <a href="https://twitter.com/foppoli_luca/status/1333780245896335360?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-Many people suggested the window functions, including `lead()` and `lag()` and the cumulative functions:
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Check out the dplyr window functions, cummin, cummax, cumany and cumall. They don&#39;t seen useful at first but they can solve really tricky aggregation problems. <a href="https://t.co/aDpXqSB2Vx">https://t.co/aDpXqSB2Vx</a></p>&mdash; Robert Kubinec (@rmkubinec) <a href="https://twitter.com/rmkubinec/status/1333763578428526593?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-Alison Hill suggested `problems()`, which helps you diagnose why your data isn't loading:
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Ooh problems is a good function for importing rx <a href="https://t.co/P4ZR57PgOG">https://t.co/P4ZR57PgOG</a></p>&mdash; Alison Presmanes Hill (@apreshill) <a href="https://twitter.com/apreshill/status/1333602216318537728?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-I think that `deframe()` and `enframe()` are really exciting, since I do this operation all the time:
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">tibble::deframe(), tibble::deframe()<br>coercing a two-column df to named vector, which I prefer immensely to names(df) &lt;- vec_of_names</p>&mdash; E. David Aja (@PeeltothePithy) <a href="https://twitter.com/PeeltothePithy/status/1333563043649900544?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
-`unite()`, `separate()` and `separate_rows()` also had their own contingent: 
-
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I find myself using tidyr::unite() a lot to clean messy data - particularly useful for making unique and informative ID&#39;s for each row. coalesce() and fill() are also little known gems! :)</p>&mdash; Guy Sutton🐝🌾🇿🇦🇿🇼 (@Guy_F_Sutton) <a href="https://twitter.com/Guy_F_Sutton/status/1333668370668003329?ref_src=twsrc%5Etfw">December 1, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
 ## Functions by frequency
