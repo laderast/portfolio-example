@@ -69,7 +69,7 @@ Here's all of the tweets from this thread (naysayers included). They are in some
 Here's a [link to the cleaned CSV file](cleaned_tweets.csv)
 
 ```{r message=FALSE}
-cleaned_tweets <- read_csv("cleaned_tweets.csv")
+cleaned_tweets <- read_csv("cleaned_tweets.csv") %>% select(-parent_thread)
 
 out <- DT::datatable(cleaned_tweets)
 
