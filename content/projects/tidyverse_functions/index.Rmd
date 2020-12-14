@@ -106,10 +106,14 @@ cleaned_tweets <- read_csv("cleaned_tweets.csv") %>% select(-parent_thread) %>%
   mutate(user = paste0("[",user,"](",reply,")")) %>%
   select(-reply)
 
-cleaned_tweets %>%
+functions_by_freq <- cleaned_tweets %>%
   janitor::tabyl(funcs) %>%
   filter(!is.na(funcs)) %>%
-  arrange(desc(n)) %>%
+  arrange(desc(n)) 
+
+write_csv(functions_by_freq, "functions_by_frequency.csv")
+
+functions_by_freq %>%
   knitr::kable()
 ```
 

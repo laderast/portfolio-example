@@ -212,10 +212,14 @@ knitr::kable(parsed_tweets[1:10,-c(5:6)])</code></pre>
 ##   reply = col_character(),
 ##   parent_thread = col_character()
 ## )</code></pre>
-<pre class="r"><code>cleaned_tweets %&gt;%
+<pre class="r"><code>functions_by_freq &lt;- cleaned_tweets %&gt;%
   janitor::tabyl(funcs) %&gt;%
   filter(!is.na(funcs)) %&gt;%
-  arrange(desc(n)) %&gt;%
+  arrange(desc(n)) 
+
+write_csv(functions_by_freq, &quot;functions_by_frequency.csv&quot;)
+
+functions_by_freq %&gt;%
   knitr::kable()</code></pre>
 <table>
 <thead>
